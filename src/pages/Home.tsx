@@ -6,6 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useTranslation } from 'react-i18next';
+import './styling.css';
 
 const Home = () => {
     const theme = useTheme();
@@ -21,6 +22,8 @@ const Home = () => {
         }
     }
     const [t] = useTranslation('common', { keyPrefix: 'home' })
+
+
     return (
         <>
             <Box height={screenSizeDownMd ? screenSizeDownSm ? '862px' : '905px' : '550px'}
@@ -33,7 +36,7 @@ const Home = () => {
                 pl={screenSizeDown1000px ? 5 : 10} pr={screenSizeDown1000px ? 8 : 15}
             >
                 <Header />
-                <img src={images.CrossIcon} width={'100vw'} style={{ position: 'absolute', top: 80, left: 30 }} />
+                <img src={images.CrossIcon} width={'100vw'} style={{ position: 'absolute', top: 80, left: 30, animation: 'rotation 17s linear infinite' }} />
                 <img src={images.CornerImage} style={{ position: 'absolute', bottom: 0, right: 0, zIndex: 200 }} />
                 <Box style={{ position: 'absolute', top: 250, left: 50 }} display={'flex'} flexDirection={'column'} gap={2}>
                     <FacebookIcon sx={{ ...socialIconStyle, color: '#FFFFFF' }} />
@@ -51,7 +54,7 @@ const Home = () => {
                             <Button color='secondary' sx={{ textTransform: 'capitalize' }} variant='contained'>{t('projectViewText')}</Button>
                         </Box>
                     </Box>
-                    <img src={images.myImage} style={{ zIndex: 10000, width: 'fit-content', placeSelf: "center" }} height={'460px'} />
+                    <img src={images.myImage} style={{ zIndex: 10000, width: 'fit-content', placeSelf: "center" }} height={'450px'} />
                 </Box >
             </Box>
         </>

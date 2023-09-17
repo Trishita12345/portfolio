@@ -2,6 +2,7 @@ import { Box, Button, Grid, IconButton, Typography, useMediaQuery, useTheme } fr
 import { images } from '../Assets/images';
 import { useTranslation } from 'react-i18next';
 import DraftsIcon from '@mui/icons-material/Drafts';
+import './styling.css';
 
 const About = () => {
     const theme = useTheme();
@@ -23,7 +24,7 @@ const About = () => {
                 py={8}
             >
                 <Grid container spacing={8}>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} style={{ animation: 'fadeInLeft 2s' }}>
                         <Box display={'flex'} flexDirection={'column'} gap={4}>
                             <Typography sx={{ color: theme.palette.primary.dark }} variant='h4' fontWeight={600}>
                                 {t('header1')}
@@ -50,7 +51,7 @@ const About = () => {
                             </Grid>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} style={{ animation: 'fadeInRight 2s' }}>
                         <Box display={'flex'} flexDirection={'column'} gap={4}>
                             <Typography sx={{ color: theme.palette.primary.dark }} variant='h4' fontWeight={600}>
                                 {t('header2')}{t('header3')}

@@ -7,8 +7,8 @@ import ReorderIcon from '@mui/icons-material/Reorder';
 
 const LogoComponent = () =>
     <Box display={'flex'} justifyContent={'center'} alignItems={'center'} pl={2}>
-        <img src={images.Logo} width={'50vw'} />
-        <Typography color={'#FFFFFF'} variant='h5'>&nbsp;Cropium</Typography>
+        <img src={images.MyLogo} />
+        {/* <Typography color={'#FFFFFF'} variant='h5'>&nbsp;TheFuture</Typography> */}
     </Box>
 
 const NavigationComponent = () => {
@@ -40,6 +40,7 @@ const NavigationComponent = () => {
 }
 
 const LanguageComponent = ({ selectedLang, setSelectedLang }: { selectedLang: string, setSelectedLang: any }) => {
+    const theme = useTheme();
     const langStyleSelected = {
         color: '#FFFFFF',
         cursor: 'pointer',
@@ -51,7 +52,7 @@ const LanguageComponent = ({ selectedLang, setSelectedLang }: { selectedLang: st
     }
 
     return (
-        <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={2}>
+        <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={2} bgcolor={theme.palette.primary.main} px={1}>
             <Typography sx={selectedLang === 'en' ? langStyleSelected : langStyleNotSelected} onClick={() => setSelectedLang('en')}>
                 En
             </Typography>
