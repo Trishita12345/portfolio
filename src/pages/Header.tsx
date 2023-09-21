@@ -3,7 +3,8 @@ import { images } from '../Assets/images';
 import { theme } from '../theme';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import ReorderIcon from '@mui/icons-material/Reorder';
+// import ReorderIcon from '@mui/icons-material/Reorder';
+import { IoReorderFour } from 'react-icons/io5';
 import { motion } from 'framer-motion'
 const LogoComponent = () =>
     <Box display={'flex'} justifyContent={'center'} alignItems={'center'} pl={2}>
@@ -80,7 +81,7 @@ const Header = () => {
                 {!screenSizeDownSm && <LanguageComponent selectedLang={i18n.language} setSelectedLang={i18n.changeLanguage} />}
                 <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize' }}>{t('hireMeText')}</Button>
                 {screenSizeDownMd && <IconButton sx={{ color: '#FFFFFF' }} size='large'>
-                    <ReorderIcon />
+                    <IoReorderFour />
                 </IconButton>}
             </Box>
         </Box >
