@@ -20,5 +20,11 @@
         "header3": "Plus que vous pouvez trouver ici",
         "aboutText": "Développeur Web full stack avec plus de 3 ans d'expérience dans la création d'applications Web gourmandes en données avec React JS et Spring Boot avec SQL Server. J'ai construit quelques projets Flutter. J'ai une compréhension approfondie du SDLC complet avec des compétences en HTML5, CSS, Javascript, React JS, Redux, Web API, Java Spring Boot, Flutter, Dart JS, SQL, Git., JIRA.",
         "downloadCvText": "Télécharger CV"
+    },
+    "skills": {
+        "title": "Expérience et compétences",
+        "frontend": "Développement frontend",
+        "backend": "Développement back-end",
+        "database": "Gestion de base de données"
     }
 }

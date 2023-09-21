@@ -23,5 +23,13 @@
     },
     "expertize": {
         "header": "We Have Expertize With World's Most Powerful Tools"
+    },
+    "skills": {
+        "title": "Experience & Skills",
+        "frontend": "Frontend Development",
+        "backend": "Backend Development",
+        "database": "Database Management",
+        "cloud": "Cloud",
+        "devops": "DevOps"
     }
 }
