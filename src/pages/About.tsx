@@ -1,7 +1,7 @@
 import { Box, Button, Grid, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { images } from '../Assets/images';
 import { useTranslation } from 'react-i18next';
-import DraftsIcon from '@mui/icons-material/Drafts';
+import { MdDrafts } from 'react-icons/md'
 import { motion } from "framer-motion"
 import './styling.css';
 import { ReactNode } from 'react';
@@ -39,7 +39,7 @@ const About = () => {
                                 <Box display={'flex'} gap={1} alignItems='center'>
 
                                     <IconButton sx={{ borderRadius: '50%', backgroundColor: theme.palette.secondary.light, height: '30px', width: '30px' }}>
-                                        <DraftsIcon color='secondary' sx={{ fontSize: '16px' }} />
+                                        <MdDrafts color='secondary' style={{ fontSize: '16px' }} />
                                     </IconButton>
                                     <Typography sx={{ fontSize: '12px', fontWeight: 600 }} color="secondary"><u>psubhajit14@gmail.com</u></Typography>
 
