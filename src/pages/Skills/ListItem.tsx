@@ -8,49 +8,6 @@ import { GrDeploy } from 'react-icons/gr'
 import { PiProjectorScreenChartLight } from 'react-icons/pi'
 import { GiServerRack } from 'react-icons/gi'
 
-export const skills = (t: any) => [{
-    title: 'B.Tech in CSE',
-    subtitle: "B P Poddar Institute of Management and Technology",
-    time: "2016-2020",
-    Icon: "school",
-    color: "#7877ee",
-    backgroundColor: "#efebff",
-}, {
-    title: t('frontend'),
-    subtitle: "React Js, HTML, CSS, Figma UI/UX",
-    time: "2020-Present",
-    Icon: "frontend",
-    color: "#fba920",
-    backgroundColor: "#fef2dd"
-}, {
-    title: t('backend'),
-    subtitle: "Node Js, Spring Boot, Payment API Integration",
-    time: "2020-Present",
-    Icon: "backend",
-    color: "#e22b55",
-    backgroundColor: "#faeef6"
-}, {
-    title: t('database'),
-    subtitle: "MySQL, PostgreSQL, Oracle DB",
-    time: "2020-Present",
-    Icon: "database",
-    color: "#4ac4e3",
-    backgroundColor: "#e5f8fd"
-}, {
-    title: 'Cloud',
-    subtitle: "Firebase Cloudstore, Authentication, Authorization",
-    time: "2020-Present",
-    Icon: "cloud",
-    color: "#8bc240",
-    backgroundColor: "#e0fcdb"
-}, {
-    title: 'DevOps',
-    subtitle: "GitHub, Vercel",
-    time: "2020-Present",
-    Icon: "devops",
-    color: "#7877ee",
-    backgroundColor: "#efebff"
-}]
 const getIcon = (Icon: string, color: string): React.ReactNode => {
     switch (Icon) {
         case "school":
@@ -95,9 +52,9 @@ export const ListItem = ({ item, index }: { item: any, index: number }) => {
                         <Typography variant="h6" fontWeight={"semibold"}>{item.title}</Typography>
                         <Typography variant="body2" fontWeight={"semibold"}>{item.subtitle}</Typography>
                     </Grid>
-
                 </Grid>
                 <Typography variant="h4" position={"absolute"} bottom={"-10px"} right={"-7px"} color={"#efebff"}>0{index + 1}</Typography>
             </motion.div>
-        </Grid>)
+        </Grid>
+    )
 }
