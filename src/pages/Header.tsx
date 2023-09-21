@@ -3,7 +3,6 @@ import { images } from '../Assets/images';
 import { theme } from '../theme';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-// import ReorderIcon from '@mui/icons-material/Reorder';
 import { IoReorderFour } from 'react-icons/io5';
 import { motion } from 'framer-motion'
 const LogoComponent = () =>
