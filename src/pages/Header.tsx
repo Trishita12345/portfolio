@@ -4,7 +4,7 @@ import { theme } from '../theme';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReorderIcon from '@mui/icons-material/Reorder';
-
+import { motion } from 'framer-motion'
 const LogoComponent = () =>
     <Box display={'flex'} justifyContent={'center'} alignItems={'center'} pl={2}>
         <img src={images.MyLogo} />
@@ -25,16 +25,18 @@ const NavigationComponent = () => {
     return (
         <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={3} bgcolor={theme.palette.primary.main}>
             {arr.map((i: any) => (
-                <Typography color={'#FFFFFF'}
-                    sx={{
-                        opacity: i.active ? 1 : 0.4,
-                        cursor: 'pointer',
-                        ':hover': {
-                            opacity: 1
-                        }
-                    }}>
-                    {i.name}
-                </Typography>
+                <motion.div whileHover={{ scale: 1.1 }}>
+                    <Typography color={'#FFFFFF'}
+                        sx={{
+                            opacity: i.active ? 1 : 0.4,
+                            cursor: 'pointer',
+                            ':hover': {
+                                opacity: 1
+                            }
+                        }}>
+                        {i.name}
+                    </Typography>
+                </motion.div>
             ))}
         </Box>)
 }
