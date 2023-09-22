@@ -16,7 +16,7 @@ const About = () => {
 
             <Box
                 sx={{
-                    // height: '400px',
+                    overflow: 'hidden',
                     backgroundImage: `url(${images.BackgroundSection2})`,
                     // backgroundColor: '#ffffea',
                     [theme.breakpoints.down(600)]: {

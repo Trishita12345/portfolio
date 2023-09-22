@@ -81,7 +81,7 @@ const Skills: React.FC<any> = () => {
 
 
     return (
-        <Box marginY={5} display={"flex"} flexDirection={"column"} alignItems={"center"} >
+        <Box marginY={5} display={"flex"} flexDirection={"column"} alignItems={"center"} overflow={'hidden'}>
             <Typography variant="h4" fontWeight={"bold"}>{t('title')}</Typography>
             <Grid container marginY={2} justifyContent={"center"}>
                 {experience(t).map((item: any, index: number) => <ListItem item={item} index={index} />)}
