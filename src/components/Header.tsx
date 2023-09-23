@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, Fab, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { images } from '../Assets/images';
 import { theme } from '../theme';
 import { useEffect, useState } from 'react';
@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { IoReorderFour } from 'react-icons/io5';
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import { PiSuitcaseSimpleLight } from 'react-icons/pi';
 
 export const LogoComponent = () => {
     const navigate = useNavigate();
@@ -102,7 +103,12 @@ const Header = () => {
             {!screenSizeDownMd && <NavigationComponent />}
             <Box display={'flex'} alignItems={'center'} gap={2}>
                 {!screenSizeDownSm && <LanguageComponent selectedLang={i18n.language} setSelectedLang={i18n.changeLanguage} />}
-                {!screenSizeDown500 && <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize' }}>{t('hireMeText')}</Button>}
+                {!screenSizeDown500
+                    ? <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize' }}>{t('hireMeText')}</Button>
+                    : <Fab sx={{ position: "fixed", bottom: 30, right: 30, backgroundColor: "#fba920", color: "black" }}>
+                        <PiSuitcaseSimpleLight size={"20px"} />
+                    </Fab>
+                }
                 {screenSizeDownMd && <IconButton sx={{ color: '#FFFFFF' }} size='large'>
                     <IoReorderFour />
                 </IconButton>}
