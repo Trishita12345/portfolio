@@ -7,7 +7,6 @@ import './styling.css';
 
 const Home = () => {
     const theme = useTheme();
-    const screenSizeDown1000px = useMediaQuery(theme.breakpoints.down(1000))
     const screenSizeDownMd = useMediaQuery(theme.breakpoints.down('md'))
     const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
     const socialIconStyle = {
@@ -28,12 +27,12 @@ const Home = () => {
                     backgroundImage: `url(${images.BackgroundImage})`, position: 'relative',
                     overflow: 'clip',
                     [theme.breakpoints.up('md')]: {
-                        height: '800px'
+                        height: '700px'
                     }
                 }}
                 pl={screenSizeDownMd ? 4 : 10} pr={screenSizeDownMd ? 4 : 15}
             >
-                <Header />
+                {/* <Header /> */}
                 <img src={images.CrossIcon} width={'100vw'} style={{ position: 'absolute', top: 80, left: 30, animation: 'rotation 17s linear infinite' }} />
                 <img src={images.CornerImage} style={{ position: 'absolute', bottom: 0, right: 0, zIndex: 200 }} />
                 <Box style={{

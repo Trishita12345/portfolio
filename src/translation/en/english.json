@@ -10,7 +10,7 @@
         "homeText": "Home",
         "aboutText": "About",
         "blogText": "Blog",
-        "pagesText": "Pages",
+        "projectsText": "Projects",
         "contactText": "Contact"
     },
     "about": {
@@ -34,5 +34,8 @@
     },
     "follow": {
         "title": "Follow Us"
+    },
+    "feedback": {
+        "title": "Our Happy Client"
     }
 }

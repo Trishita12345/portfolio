@@ -1,16 +1,20 @@
 import React from 'react';
-// import './App.css';
-import MainContent from './pages/MainContent';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material';
 import { theme } from './theme';
+import Header from './pages/Header';
+import { BrowserRouter } from "react-router-dom";
+import { RouterComponent } from './routes';
 
 function App() {
 
   const defaultTheme = createTheme(theme);
   return (
     <ThemeProvider theme={defaultTheme}>
-      <MainContent />
+      <BrowserRouter>
+        <Header />
+        <RouterComponent />
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

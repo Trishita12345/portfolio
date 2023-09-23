@@ -1,9 +1,12 @@
 import React from 'react';
-import Home from './Home';
-import Expertize from './Expertize';
-import Skills from './Skills';
-import Follow from './Follow';
+import Header from './Header';
+
+const Home = React.lazy(() => import('./Home'));
 const About = React.lazy(() => import('./About'));
+const Expertize = React.lazy(() => import('./Expertize'));
+const Skills = React.lazy(() => import('./Skills'));
+const Feedback = React.lazy(() => import('./Feedback'));
+const Follow = React.lazy(() => import('./Follow'));
 
 const MainContent = () => {
     return (
@@ -12,6 +15,7 @@ const MainContent = () => {
             <About />
             <Expertize />
             <Skills />
+            <Feedback />
             <Follow />
         </>
     );
