@@ -1,6 +1,6 @@
 import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { images } from '../Assets/images';
-import Header from './Header';
+import { images } from '../../Assets/images';
+import Header from '../../components/Header';
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineInstagram } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
 import './styling.css';
@@ -33,7 +33,7 @@ const Home = () => {
                 pl={screenSizeDownMd ? 4 : 10} pr={screenSizeDownMd ? 4 : 15}
             >
                 {/* <Header /> */}
-                <img src={images.CrossIcon} width={'100vw'} style={{ position: 'absolute', top: 80, left: 30, animation: 'rotation 17s linear infinite' }} />
+                <img src={images.CrossIcon} width={screenSizeDownSm ? '60vw' : '100vw'} style={{ position: 'absolute', top: 10, left: 30, animation: 'rotation 17s linear infinite' }} />
                 <img src={images.CornerImage} style={{ position: 'absolute', bottom: 0, right: 0, zIndex: 200 }} />
                 <Box style={{
                     position: 'absolute', top: 250, left: 50
@@ -44,7 +44,7 @@ const Home = () => {
                     <AiOutlineInstagram style={socialIconStyle} />
                 </Box>
                 <Box display={'flex'} flexDirection={screenSizeDownMd ? 'column' : 'row'} justifyContent={screenSizeDownMd ? 'center' : 'space-between'}>
-                    <Box display={'flex'} flexDirection={'column'} pl={8} pt={10} alignItems={screenSizeDownMd ? 'center' : 'start'} flex={7} justifyContent={"center"}>
+                    <Box display={'flex'} flexDirection={'column'} pl={8} alignItems={screenSizeDownMd ? 'center' : 'start'} flex={7} justifyContent={"center"}>
                         <Typography color={'#FFFFFF'} variant={screenSizeDownSm ? 'h4' : 'h3'} fontWeight={600} whiteSpace={screenSizeDownSm ? 'normal' : 'nowrap'} textAlign={screenSizeDownMd ? 'center' : 'start'}>
                             {t('heading1')} <br /> Subhajit Paul <br /> {t('heading2')}
                         </Typography>
@@ -53,8 +53,8 @@ const Home = () => {
                             justifyContent={screenSizeDownMd ? "center" : "start"}
                             flexDirection={screenSizeDownSm ? 'column' : 'row'}
                         >
-                            <Button color='secondary' sx={{ textTransform: 'capitalize' }} variant='contained'>{t('getInTouchText')}</Button>
-                            <Button color='secondary' sx={{ textTransform: 'capitalize' }} variant='contained'>{t('projectViewText')}</Button>
+                            <Button color='secondary' sx={{ textTransform: 'capitalize', px: 3, py: 2 }} variant='contained'>{t('getInTouchText')}</Button>
+                            <Button color='secondary' sx={{ textTransform: 'capitalize', px: 3, py: 2 }} variant='contained'>{t('projectViewText')}</Button>
                         </Box>
                     </Box>
                     <Box component={'img'} src={images.myImage} sx={{

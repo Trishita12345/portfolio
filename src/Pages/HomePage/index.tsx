@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = React.lazy(() => import('./Home'));
 const About = React.lazy(() => import('./About'));
-const Expertize = React.lazy(() => import('./Expertize'));
+const Expertize = React.lazy(() => import('../../components/Expertize'));
 const Skills = React.lazy(() => import('./Skills'));
 const Feedback = React.lazy(() => import('./Feedback'));
 const Follow = React.lazy(() => import('./Follow'));

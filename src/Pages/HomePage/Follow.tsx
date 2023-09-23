@@ -1,8 +1,8 @@
 import { Typography, Grid, Box, useTheme } from "@mui/material"
 import { AnimatePresence } from "framer-motion"
 import { useTranslation } from "react-i18next"
-import { ListItem } from "../components/ListItem"
-import { images } from '../Assets/images'
+import { ListItem } from "../../components/ListItem"
+import { images } from '../../Assets/images'
 
 
 const Follow = () => {

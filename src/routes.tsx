@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
-import MainContent from "./pages/MainContent";
-import Expertize from "./pages/Expertize";
+import MainContent from "./Pages/HomePage";
+import Expertize from "./components/Expertize";
 
 export const RouterComponent: React.FC<any> = () => {
     return (

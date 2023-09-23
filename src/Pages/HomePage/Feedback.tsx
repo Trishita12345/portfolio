@@ -1,5 +1,5 @@
 import { Box, Rating, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { images } from "../Assets/images";
+import { images } from "../../Assets/images";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useTranslation } from "react-i18next";
