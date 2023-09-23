@@ -1,9 +1,9 @@
 import { Box, Grid, Typography, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import React from "react";
-import { ListItem, } from "../components/ListItem";
-import { Progress } from "../components/Progress";
-import { images } from "../Assets/images";
+import { ListItem, } from "../../components/ListItem";
+import { Progress } from "../../components/Progress";
+import { images } from "../../Assets/images";
 
 const Skills: React.FC<any> = () => {
     const [t] = useTranslation('common', { keyPrefix: 'skills' })

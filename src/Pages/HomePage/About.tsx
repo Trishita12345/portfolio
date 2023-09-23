@@ -1,5 +1,5 @@
 import { Box, Button, Grid, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { images } from '../Assets/images';
+import { images } from '../../Assets/images';
 import { useTranslation } from 'react-i18next';
 import { MdDrafts } from 'react-icons/md'
 import { motion } from "framer-motion"
