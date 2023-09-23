@@ -19,12 +19,11 @@ const Expertize = () => {
     const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
     const [width, setWidth] = useState<any>(0);
     const [selected, setSelected] = useState<any>(0);
-    const carousel = useRef() as any;
 
     const [t] = useTranslation('common', { keyPrefix: 'expertize' })
 
     useEffect(() => {
-        if (screenSizeDownSm) {
+        if (!screenSizeDownSm) {
             setTimeout(() => {
                 if (selected < 7) setSelected(selected + 1)
                 else setSelected(0)

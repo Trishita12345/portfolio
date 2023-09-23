@@ -16,11 +16,11 @@ export const Progress = ({ item }: { item: any }) => {
         return () => {
             clearInterval(timer)
         }
-    }, [inView, progress])
+    }, [inView, progress, item.value])
 
 
     return (
-        <Grid item marginX={3} ref={ref}>
+        <Grid item paddingX={3} ref={ref}>
             <Box>
                 <Box padding={3} width={"100px"} height={"100px"} position={"relative"}>
                     <Typography position={"absolute"} left="50%" top="50%" sx={{ transform: "translate(-50%, -50%)", color: item.color }}>{progress}%</Typography>

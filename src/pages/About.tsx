@@ -21,7 +21,7 @@ const About = () => {
                     // backgroundColor: '#ffffea',
                     [theme.breakpoints.down(600)]: {
                         px: 2
-                    }
+                    },
                 }}
                 px={screenSizeDownMd ? 5 : 20}
                 py={8}
