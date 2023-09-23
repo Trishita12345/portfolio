@@ -7,8 +7,8 @@ import { IoReorderFour } from 'react-icons/io5';
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 
-const LogoComponent = () =>
-    <Box display={'flex'} justifyContent={'center'} alignItems={'center'} pl={2}>
+export const LogoComponent = () =>
+    <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
         <img src={images.MyLogo} />
     </Box>
 

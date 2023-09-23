@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Header';
 
 const Home = React.lazy(() => import('./Home'));
 const About = React.lazy(() => import('./About'));
