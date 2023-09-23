@@ -5,8 +5,9 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { IoReorderFour } from 'react-icons/io5';
 import { motion } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { PiSuitcaseSimpleLight } from 'react-icons/pi';
+import { NavigationComponent } from './NavigationComponent';
 
 export const LogoComponent = () => {
     const navigate = useNavigate();
@@ -16,45 +17,11 @@ export const LogoComponent = () => {
         </Box>)
 }
 
-const NavigationComponent = () => {
-    const navigate = useNavigate();
-    const theme = useTheme();
-    const [active, setActive] = useState<number>(0)
-    const [t] = useTranslation('common', { keyPrefix: 'header' })
-    const arr = [
-        { name: t('homeText'), element: '', navigateURL: '/', value: 0 },
-        { name: t('aboutText'), element: '', navigateURL: '/about', value: 1 },
-        { name: t('blogText'), element: '', navigateURL: '/', value: 2 },
-        { name: t('projectsText'), element: '', navigateURL: '/', value: 3 },
-        { name: t('contactText'), element: '', navigateURL: '/contact-us', value: 4 }
-    ];
 
-    return (
-        <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={3} bgcolor={theme.palette.primary.main}>
-            {arr.map((i: any, idx: number) => (
-                <motion.div whileHover={{ scale: 1.1 }}>
-                    <Typography color={'#FFFFFF'}
-                        onClick={() => {
-                            setActive(idx)
-                            navigate(i.navigateURL)
-                        }
-                        }
-                        sx={{
-                            opacity: active === idx ? 1 : 0.4,
-                            cursor: 'pointer',
-                            ':hover': {
-                                opacity: 1
-                            }
-                        }}>
-                        {i.name}
-                    </Typography>
-                </motion.div>
-            ))}
-        </Box>)
-}
 
-const LanguageComponent = ({ selectedLang, setSelectedLang }: { selectedLang: string, setSelectedLang: any }) => {
+const LanguageComponent = () => {
     const theme = useTheme();
+    const [t, i18n] = useTranslation('common')
     const langStyleSelected = {
         color: '#FFFFFF',
         cursor: 'pointer',
@@ -67,10 +34,10 @@ const LanguageComponent = ({ selectedLang, setSelectedLang }: { selectedLang: st
 
     return (
         <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={2} bgcolor={theme.palette.primary.main} px={1}>
-            <Typography sx={selectedLang === 'en' ? langStyleSelected : langStyleNotSelected} onClick={() => setSelectedLang('en')}>
+            <Typography sx={i18n.language === 'en' ? langStyleSelected : langStyleNotSelected} onClick={() => i18n.changeLanguage('en')}>
                 En
             </Typography>
-            <Typography sx={selectedLang === 'fr' ? langStyleSelected : langStyleNotSelected} onClick={() => setSelectedLang('fr')}>
+            <Typography sx={i18n.language === 'fr' ? langStyleSelected : langStyleNotSelected} onClick={() => i18n.changeLanguage('fr')}>
                 Fr
             </Typography>
         </Box>)
@@ -79,8 +46,7 @@ const LanguageComponent = ({ selectedLang, setSelectedLang }: { selectedLang: st
 
 const Header = () => {
     const theme = useTheme();
-    const [selectedLang, setSelectedLang] = useState<string>('en');
-    const [t, i18n] = useTranslation('common', { keyPrefix: 'header' })
+    const [t] = useTranslation('common', { keyPrefix: 'header' })
     const screenSizeUpLg = useMediaQuery(theme.breakpoints.up('lg'))
     const screenSizeUpMd = useMediaQuery(theme.breakpoints.up('md'))
     const screenSizeDownMd = useMediaQuery(theme.breakpoints.down('md'))
@@ -102,7 +68,7 @@ const Header = () => {
             <LogoComponent />
             {!screenSizeDownMd && <NavigationComponent />}
             <Box display={'flex'} alignItems={'center'} gap={2}>
-                {!screenSizeDownSm && <LanguageComponent selectedLang={i18n.language} setSelectedLang={i18n.changeLanguage} />}
+                {!screenSizeDownSm && <LanguageComponent />}
                 {!screenSizeDown500
                     ? <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize' }}>{t('hireMeText')}</Button>
                     : <Fab sx={{ position: "fixed", bottom: 30, right: 30, backgroundColor: "#fba920", color: "black" }}>

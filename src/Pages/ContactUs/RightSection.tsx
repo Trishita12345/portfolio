@@ -59,7 +59,7 @@ const RightSection = () => {
                         setEmailValidError(false)
                         setEmailError(true)
                     }
-                    else if (!emailRegex.test(e.target.value)) {
+                    else if (!emailRegex.test((e.target.value).toLowerCase())) {
                         setEmailError(false)
                         setEmailValidError(true)
                     }

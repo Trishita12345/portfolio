@@ -11,18 +11,18 @@ import { useEffect } from "react";
 const ContactUs = () => {
     const theme = useTheme();
     const screenSizeDown800 = useMediaQuery(theme.breakpoints.down(800))
-    const screenSizeUplg = useMediaQuery(theme.breakpoints.up('lg'))
-    const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
     const [t] = useTranslation('common', { keyPrefix: 'contactUs' })
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: "smooth" })
     }, [])
     return (
-        <Grid container px={screenSizeDown800 ? screenSizeDown800 ? 5 : 10 : 15} py={5} spacing={8} justifyContent={'center'}>
+        <Grid id='contactUs' position={"relative"}
+            container px={screenSizeDown800 ? screenSizeDown800 ? 5 : 10 : 15} my={6} spacing={8} justifyContent={'center'}>
+            <img src={images.SideImg} style={{ position: "absolute", right: 0, top: '30%', zIndex: -1, width: "200px", opacity: 0.8 }} />
             <Grid item xs={12} lg={6} color={theme.palette.primary.dark}>
                 <LeftSection />
             </Grid>
-            <Grid item xs={12} lg={6}>
+            <Grid item xs={12} lg={6} bgcolor={"white"}>
                 <RightSection />
             </Grid>
         </Grid >

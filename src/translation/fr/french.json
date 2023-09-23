@@ -9,9 +9,10 @@
         "hireMeText": "Engagez moi",
         "homeText": "Maison",
         "aboutText": "À propos",
-        "blogText": "Blog",
+        "skillsText": "Compétences",
         "projectsText": "Projets",
-        "contactText": "Contact"
+        "contactText": "Contact",
+        "backtoHome": "Revenir à la page d'accueil"
     },
     "about": {
         "header1": "Tout type de requête et de discussion",
@@ -50,6 +51,9 @@
         "subjectRequired": "Le sujet est obligatoire",
         "messageRequired": "Le message est requis",
         "emailInvalid": "Veuillez entrer un email valide",
-        "addressValue": "Appartement n° - GN OAK, Hiland Woods, rue n° : 626, zone d'action - IIC, Newtown, Kolkata -700157"
+        "addressValue": "Appartement n°: GN OAK, Hiland Woods, rue n°: 626, zone d'action: IIC, Newtown, Kolkata - 700157"
+    },
+    "footer": {
+        "copyrightText": "Tous droits réservés."
     }
 }

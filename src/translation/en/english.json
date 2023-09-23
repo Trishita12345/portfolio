@@ -9,9 +9,10 @@
         "hireMeText": "Hire Me",
         "homeText": "Home",
         "aboutText": "About",
-        "blogText": "Blog",
+        "skillsText": "Skills",
         "projectsText": "Projects",
-        "contactText": "Contact"
+        "contactText": "Contact",
+        "backtoHome": "Go Back to Home Page"
     },
     "about": {
         "header1": "Any Type Of Query & Discussion",
@@ -55,6 +56,9 @@
         "subjectRequired": "Subject is required",
         "messageRequired": "Message is required",
         "emailInvalid": "Please enter a valid email",
-        "addressValue": "Flat no - GN OAK, Hiland Woods, Street no :626,   action area - IIC, Newtown, Kolkata -700157"
+        "addressValue": "Flat no: GN OAK, Hiland Woods, Street no: 626,   action area: IIC, Newtown, Kolkata - 700157"
+    },
+    "footer": {
+        "copyrightText": "All Rights Reserved."
     }
 }
