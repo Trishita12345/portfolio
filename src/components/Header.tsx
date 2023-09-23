@@ -7,31 +7,39 @@ import { IoReorderFour } from 'react-icons/io5';
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 
-export const LogoComponent = () =>
-    <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
-        <img src={images.MyLogo} />
-    </Box>
+export const LogoComponent = () => {
+    const navigate = useNavigate();
+    return (
+        <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
+            <img src={images.MyLogo} onClick={() => navigate('/')} style={{ cursor: 'pointer' }} />
+        </Box>)
+}
 
 const NavigationComponent = () => {
     const navigate = useNavigate();
     const theme = useTheme();
+    const [active, setActive] = useState<number>(0)
     const [t] = useTranslation('common', { keyPrefix: 'header' })
     const arr = [
-        { name: t('homeText'), element: '', active: true, navigateURL: '/' },
-        { name: t('aboutText'), element: '', navigateURL: '/about' },
-        { name: t('blogText'), element: '', navigateURL: '/' },
-        { name: t('projectsText'), element: '', navigateURL: '/' },
-        { name: t('contactText'), element: '', navigateURL: '/' }
+        { name: t('homeText'), element: '', navigateURL: '/', value: 0 },
+        { name: t('aboutText'), element: '', navigateURL: '/about', value: 1 },
+        { name: t('blogText'), element: '', navigateURL: '/', value: 2 },
+        { name: t('projectsText'), element: '', navigateURL: '/', value: 3 },
+        { name: t('contactText'), element: '', navigateURL: '/contact-us', value: 4 }
     ];
 
     return (
         <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={3} bgcolor={theme.palette.primary.main}>
-            {arr.map((i: any) => (
+            {arr.map((i: any, idx: number) => (
                 <motion.div whileHover={{ scale: 1.1 }}>
                     <Typography color={'#FFFFFF'}
-                        onClick={() => navigate(i.navigateURL)}
+                        onClick={() => {
+                            setActive(idx)
+                            navigate(i.navigateURL)
+                        }
+                        }
                         sx={{
-                            opacity: i.active ? 1 : 0.4,
+                            opacity: active === idx ? 1 : 0.4,
                             cursor: 'pointer',
                             ':hover': {
                                 opacity: 1

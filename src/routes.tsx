@@ -1,13 +1,15 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
-import MainContent from "./Pages/HomePage";
+import HomePage from "./Pages/HomePage";
 import Expertize from "./components/Expertize";
+import ContactUs from "./Pages/ContactUs";
 
 export const RouterComponent: React.FC<any> = () => {
     return (
         <Routes>
-            <Route index element={<MainContent />} />
+            <Route index element={<HomePage />} />
             <Route path="about" element={<Expertize />} />
+            <Route path="contact-us" element={<ContactUs />} />
             {/* <Route path="*" element={<Result
                 status="404"
                 title="404"

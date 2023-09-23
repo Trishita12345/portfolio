@@ -7,7 +7,7 @@ const Skills = React.lazy(() => import('./Skills'));
 const Feedback = React.lazy(() => import('./Feedback'));
 const Follow = React.lazy(() => import('./Follow'));
 
-const MainContent = () => {
+const HomePage = () => {
     return (
         <>
             <Home />
@@ -20,4 +20,4 @@ const MainContent = () => {
     );
 }
 
-export default MainContent;
+export default HomePage;

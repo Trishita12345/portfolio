@@ -37,5 +37,24 @@
     },
     "feedback": {
         "title": "Our Happy Client"
+    },
+    "contactUs": {
+        "contactus": "Contact Us",
+        "header1": "Don't Hesitate To Contact Us",
+        "header2": "If You Need More Help.",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "Email",
+        "writeToUs": "Write to Us",
+        "name": "Name",
+        "subject": "Subject",
+        "yourMessage": "Your Message",
+        "submitNow": "Submit Now",
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "subjectRequired": "Subject is required",
+        "messageRequired": "Message is required",
+        "emailInvalid": "Please enter a valid email",
+        "addressValue": "Flat no - GN OAK, Hiland Woods, Street no :626,   action area - IIC, Newtown, Kolkata -700157"
     }
 }
