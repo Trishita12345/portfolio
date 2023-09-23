@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, useEffect } from 'react';
 
 const Home = React.lazy(() => import('./Home'));
 const About = React.lazy(() => import('./About'));
@@ -8,14 +8,29 @@ const Feedback = React.lazy(() => import('./Feedback'));
 const Follow = React.lazy(() => import('./Follow'));
 
 const HomePage = () => {
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }, [])
     return (
         <>
-            <Home />
-            <About />
-            <Expertize />
-            <Skills />
-            <Feedback />
-            <Follow />
+            <Suspense fallback={<div>...Loading</div>}>
+                <Home />
+            </Suspense>
+            <Suspense fallback={<div>...Loading</div>}>
+                <About />
+            </Suspense>
+            <Suspense fallback={<div>...Loading</div>}>
+                <Expertize />
+            </Suspense>
+            <Suspense fallback={<div>...Loading</div>}>
+                <Skills />
+            </Suspense>
+            <Suspense fallback={<div>...Loading</div>}>
+                <Feedback />
+            </Suspense>
+            <Suspense fallback={<div>...Loading</div>}>
+                <Follow />
+            </Suspense>
         </>
     );
 }
