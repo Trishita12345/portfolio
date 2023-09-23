@@ -2,10 +2,11 @@ import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from "@mui/mat
 import { images } from "../Assets/images";
 import { useTranslation } from "react-i18next";
 import { LogoComponent } from "./Header";
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
     const [t] = useTranslation('common', { keyPrefix: 'home' })
-
+    const navigate = useNavigate();
     const theme = useTheme();
     const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
 
@@ -20,7 +21,9 @@ const Footer = () => {
                         <Typography mt={8} fontSize={"12px"}>It is a long established fact that <Typography fontWeight={"bold"} fontSize={"12px"} display={"inline-block"} color={theme.palette.primary.main}>psubhajit14@gmail.com</Typography> content of a page.</Typography>
                     </Grid>
                     <Grid item xs={10} md={3}>
-                        <Button color='secondary' size="large" sx={{ textTransform: 'capitalize' }} variant='contained'>{t('getInTouchText')}</Button>
+                        <Button color='secondary' size="large" sx={{ textTransform: 'capitalize' }} variant='contained'
+                            onClick={() => navigate('/contact-us')}
+                        >{t('getInTouchText')}</Button>
                     </Grid>
                 </Grid>
             </Box>

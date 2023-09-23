@@ -10,7 +10,7 @@
         "homeText": "Maison",
         "aboutText": "À propos",
         "blogText": "Blog",
-        "pagesText": "Pages",
+        "projectsText": "Projets",
         "contactText": "Contact"
     },
     "about": {
@@ -32,5 +32,24 @@
     },
     "feedback": {
         "title": "Notre client heureux"
+    },
+    "contactUs": {
+        "contactus": "Contactez-nous",
+        "header1": "N'hésitez pas à nous contacter",
+        "header2": "Si vous avez besoin de plus d'aide.",
+        "address": "Adresse",
+        "phone": "Téléphone",
+        "email": "E-mail",
+        "writeToUs": "Écrivez-nous",
+        "name": "Nom",
+        "subject": "Sujet",
+        "yourMessage": "Votre message",
+        "submitNow": "Soumettre maintenant",
+        "nameRequired": "Le nom est requis",
+        "emailRequired": "L'e-mail est requis",
+        "subjectRequired": "Le sujet est obligatoire",
+        "messageRequired": "Le message est requis",
+        "emailInvalid": "Veuillez entrer un email valide",
+        "addressValue": "Appartement n° - GN OAK, Hiland Woods, rue n° : 626, zone d'action - IIC, Newtown, Kolkata -700157"
     }
 }
