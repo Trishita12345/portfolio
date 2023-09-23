@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './Home';
 import Expertize from './Expertize';
 import Skills from './Skills';
-
+import Follow from './Follow';
 const About = React.lazy(() => import('./About'));
 
 const MainContent = () => {
@@ -12,7 +12,7 @@ const MainContent = () => {
             <About />
             <Expertize />
             <Skills />
-
+            <Follow />
         </>
     );
 }

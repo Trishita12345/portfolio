@@ -26,5 +26,8 @@
         "frontend": "Développement frontend",
         "backend": "Développement back-end",
         "database": "Gestion de base de données"
+    },
+    "follow": {
+        "title": "Suivez-nous"
     }
 }

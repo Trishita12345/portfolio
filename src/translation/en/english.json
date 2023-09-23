@@ -31,5 +31,8 @@
         "database": "Database Management",
         "cloud": "Cloud",
         "devops": "DevOps"
+    },
+    "follow": {
+        "title": "Follow Us"
     }
 }

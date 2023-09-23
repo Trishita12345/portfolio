@@ -1,13 +1,10 @@
-import { Box, CircularProgress, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import React from "react";
-import { ListItem, } from "./ListItem";
-import { Progress } from "./Progress";
+import { ListItem, } from "../components/ListItem";
+import { Progress } from "../components/Progress";
 
 const Skills: React.FC<any> = () => {
-    const theme = useTheme();
-
-    const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
     const [t] = useTranslation('common', { keyPrefix: 'skills' })
 
     const experience = (t: any) => [{
@@ -81,10 +78,10 @@ const Skills: React.FC<any> = () => {
 
 
     return (
-        <Box marginY={5} display={"flex"} flexDirection={"column"} alignItems={"center"} overflow={'hidden'}>
+        <Box marginY={5} display={"flex"} flexDirection={"column"} alignItems={"center"} overflow={"hidden"}>
             <Typography variant="h4" fontWeight={"bold"}>{t('title')}</Typography>
-            <Grid container marginY={2} justifyContent={"center"}>
-                {experience(t).map((item: any, index: number) => <ListItem item={item} index={index} />)}
+            <Grid container marginY={2} justifyContent={"center"} marginX={2}>
+                {experience(t).map((item: any, index: number) => <ListItem key={index} item={item} index={index} />)}
             </Grid>
             <Grid container justifyContent={"center"} alignItems={"center"}>
                 {skills.map((item: any) => <Progress item={item} />)}
