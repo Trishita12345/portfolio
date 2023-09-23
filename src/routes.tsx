@@ -8,7 +8,6 @@ export const RouterComponent: React.FC<any> = () => {
     return (
         <Routes>
             <Route index element={<HomePage />} />
-            <Route path="about" element={<Expertize />} />
             <Route path="contact-us" element={<ContactUs />} />
             {/* <Route path="*" element={<Result
                 status="404"

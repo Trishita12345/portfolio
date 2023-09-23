@@ -14,7 +14,7 @@ const About = () => {
     return (
         <>
 
-            <Box
+            <Box id='about'
                 sx={{
                     overflow: 'hidden',
                     backgroundImage: `url(${images.BackgroundSection2})`,

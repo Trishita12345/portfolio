@@ -79,7 +79,8 @@ const Skills: React.FC<any> = () => {
 
 
     return (
-        <Box marginY={5} display={"flex"} flexDirection={"column"} alignItems={"center"} overflow={"hidden"} position={"relative"}>
+        <Box id='skills'
+            marginY={5} display={"flex"} flexDirection={"column"} alignItems={"center"} overflow={"hidden"} position={"relative"}>
             <img src={images.SideImg} style={{ position: "absolute", right: 0, bottom: '50%', width: "150px", opacity: 0.8 }} />
             <Typography variant="h4" fontWeight={"bold"} sx={{ color: theme.palette.primary.dark }}>{t('title')}</Typography>
             <Grid container marginY={2} justifyContent={"center"} marginX={2}>

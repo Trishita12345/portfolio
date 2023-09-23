@@ -6,6 +6,7 @@ const Expertize = React.lazy(() => import('../../components/Expertize'));
 const Skills = React.lazy(() => import('./Skills'));
 const Feedback = React.lazy(() => import('./Feedback'));
 const Follow = React.lazy(() => import('./Follow'));
+const ContactUs = React.lazy(() => import('../ContactUs'));
 
 const HomePage = () => {
     useEffect(() => {
@@ -30,6 +31,9 @@ const HomePage = () => {
             </Suspense>
             <Suspense fallback={<div>...Loading</div>}>
                 <Follow />
+            </Suspense>
+            <Suspense fallback={<div>...Loading</div>}>
+                <ContactUs />
             </Suspense>
         </>
     );

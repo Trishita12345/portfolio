@@ -12,8 +12,8 @@ const LeftSection = () => {
 
     return (
         <>
-            <Typography fontWeight={600} fontSize={'18px'}>{t('contactus')}</Typography>
-            <Typography fontWeight={600} fontSize={screenSizeDownSm ? '26px' : '35px'} mt={3}>
+            {/* <Typography fontWeight={600} fontSize={'18px'}>{t('contactus')}</Typography> */}
+            <Typography fontWeight={600} fontSize={screenSizeDownSm ? '26px' : '35px'}>
                 {t('header1')} < br /> {t('header2')}
             </Typography>
             <Box display='flex' alignItems={'center'} mt={5}>
