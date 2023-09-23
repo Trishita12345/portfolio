@@ -5,21 +5,23 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { IoReorderFour } from 'react-icons/io5';
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
+
 const LogoComponent = () =>
     <Box display={'flex'} justifyContent={'center'} alignItems={'center'} pl={2}>
         <img src={images.MyLogo} />
-        {/* <Typography color={'#FFFFFF'} variant='h5'>&nbsp;TheFuture</Typography> */}
     </Box>
 
 const NavigationComponent = () => {
+    const navigate = useNavigate();
     const theme = useTheme();
     const [t] = useTranslation('common', { keyPrefix: 'header' })
     const arr = [
-        { name: t('homeText'), element: '', active: true },
-        { name: t('aboutText'), element: '' },
-        { name: t('blogText'), element: '' },
-        { name: t('pagesText'), element: '' },
-        { name: t('contactText'), element: '' }
+        { name: t('homeText'), element: '', active: true, navigateURL: '/' },
+        { name: t('aboutText'), element: '', navigateURL: '/about' },
+        { name: t('blogText'), element: '', navigateURL: '/' },
+        { name: t('projectsText'), element: '', navigateURL: '/' },
+        { name: t('contactText'), element: '', navigateURL: '/' }
     ];
 
     return (
@@ -27,6 +29,7 @@ const NavigationComponent = () => {
             {arr.map((i: any) => (
                 <motion.div whileHover={{ scale: 1.1 }}>
                     <Typography color={'#FFFFFF'}
+                        onClick={() => navigate(i.navigateURL)}
                         sx={{
                             opacity: i.active ? 1 : 0.4,
                             cursor: 'pointer',
@@ -69,16 +72,29 @@ const Header = () => {
     const theme = useTheme();
     const [selectedLang, setSelectedLang] = useState<string>('en');
     const [t, i18n] = useTranslation('common', { keyPrefix: 'header' })
+    const screenSizeUpLg = useMediaQuery(theme.breakpoints.up('lg'))
+    const screenSizeUpMd = useMediaQuery(theme.breakpoints.up('md'))
     const screenSizeDownMd = useMediaQuery(theme.breakpoints.down('md'))
     const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
+    const screenSizeDown500 = useMediaQuery(theme.breakpoints.down(500))
+
+
+    const getPaddingX = () => {
+        if (screenSizeUpLg) return 10;
+        else if (screenSizeUpMd && !screenSizeUpLg) return 5
+    }
 
     return (
-        <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} py={3}>
+        <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} py={3}
+            px={getPaddingX()}
+            sx={{
+                backgroundImage: `url(${images.BackgroundImage})`
+            }}>
             <LogoComponent />
             {!screenSizeDownMd && <NavigationComponent />}
             <Box display={'flex'} alignItems={'center'} gap={2}>
                 {!screenSizeDownSm && <LanguageComponent selectedLang={i18n.language} setSelectedLang={i18n.changeLanguage} />}
-                <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize' }}>{t('hireMeText')}</Button>
+                {!screenSizeDown500 && <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize' }}>{t('hireMeText')}</Button>}
                 {screenSizeDownMd && <IconButton sx={{ color: '#FFFFFF' }} size='large'>
                     <IoReorderFour />
                 </IconButton>}
