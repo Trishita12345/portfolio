@@ -1,12 +1,13 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import React from "react";
 import { ListItem, } from "../components/ListItem";
 import { Progress } from "../components/Progress";
+import { images } from "../Assets/images";
 
 const Skills: React.FC<any> = () => {
     const [t] = useTranslation('common', { keyPrefix: 'skills' })
-
+    const theme = useTheme();
     const experience = (t: any) => [{
         title: 'B.Tech in CSE',
         subtitle: "B P Poddar Institute of Management and Technology",
@@ -78,8 +79,9 @@ const Skills: React.FC<any> = () => {
 
 
     return (
-        <Box marginY={5} display={"flex"} flexDirection={"column"} alignItems={"center"} overflow={"hidden"}>
-            <Typography variant="h4" fontWeight={"bold"}>{t('title')}</Typography>
+        <Box marginY={5} display={"flex"} flexDirection={"column"} alignItems={"center"} overflow={"hidden"} position={"relative"}>
+            <img src={images.SideImg} style={{ position: "absolute", right: 0, bottom: '50%', width: "150px" }} />
+            <Typography variant="h4" fontWeight={"bold"} sx={{ color: theme.palette.primary.dark }}>{t('title')}</Typography>
             <Grid container marginY={2} justifyContent={"center"} marginX={2}>
                 {experience(t).map((item: any, index: number) => <ListItem key={index} item={item} index={index} />)}
             </Grid>

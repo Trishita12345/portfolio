@@ -50,6 +50,7 @@ export const ListItem = ({ item, index, lg = 3 }: { item: any, index: number, lg
                     cursor: item.link && 'pointer'
 
                 },
+                bgcolor: "white"
             }}
             initial={{ x: 30, opacity: 0 }}
             whileInView={{
@@ -63,7 +64,7 @@ export const ListItem = ({ item, index, lg = 3 }: { item: any, index: number, lg
             }}
         >
             <Grid container columnSpacing={2} paddingY={2}
-                alignItems={"start"}>
+                alignItems={"center"}>
                 <Grid item bgcolor={item.backgroundColor} padding={2} borderRadius={2} >{getIcon(item.Icon, item.color)}</Grid>
                 <Grid item xs={8}>
                     {item.time && <Typography variant="caption" color={item.color}>{item.time}</Typography>}
