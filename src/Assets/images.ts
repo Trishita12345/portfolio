@@ -7,6 +7,7 @@ import BackgroundSection2 from './images/BackgroundSection2.png'
 import MyLogo from './images/MyLogo.svg'
 import Rectangle42 from './images/Rectangle42.svg'
 import SideImg from './images/SideImg.svg';
+import GRPAC_Thambnail from './images/GRPAC_Thambnail.svg';
 
 export const images = {
     myImage,
@@ -17,5 +18,6 @@ export const images = {
     BackgroundSection2,
     MyLogo,
     Rectangle42,
-    SideImg
+    SideImg,
+    GRPAC_Thambnail
 }

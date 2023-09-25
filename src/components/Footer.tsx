@@ -19,11 +19,11 @@ const Footer = () => {
                 <Grid container alignItems={"center"} height={"100%"} columnSpacing={10} justifyContent={"space-around"} >
                     <Grid item xs={10} md={7}>
                         <Typography variant={screenSizeDownSm ? "h5" : "h4"} fontWeight={"bold"} color={theme.palette.primary.dark}>If You Have Any Question Feel Free To Call <Typography variant={screenSizeDownSm ? "h5" : "h4"} fontWeight={"bold"} display={"inline-block"} color={theme.palette.primary.main}>+91-80169-70670</Typography></Typography>
-                        <Typography mt={8} fontSize={"12px"}>It is a long established fact that <Typography fontWeight={"bold"} fontSize={"12px"} display={"inline-block"} color={theme.palette.primary.main}>psubhajit14@gmail.com</Typography> content of a page.</Typography>
+                        {/* <Typography mt={8} fontSize={"12px"}>It is a long established fact that <Typography fontWeight={"bold"} fontSize={"12px"} display={"inline-block"} color={theme.palette.primary.main}>psubhajit14@gmail.com</Typography> content of a page.</Typography> */}
                     </Grid>
                     <Grid item xs={10} md={3}>
                         <Button color='secondary' size="large" sx={{ textTransform: 'capitalize' }} variant='contained'
-                            onClick={() => navigate('/contact-us')}
+                            onClick={() => document.getElementById('followUs')?.scrollIntoView({ behavior: 'smooth' })}
                         >{t('getInTouchText')}</Button>
                     </Grid>
                 </Grid>

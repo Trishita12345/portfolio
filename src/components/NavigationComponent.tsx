@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useLocation } from "react-router-dom";
 
-export const NavigationComponent = () => {
+export const NavigationComponent = ({ backgroundColor, color }: { backgroundColor?: any, color?: any }) => {
     const location = useLocation();
     const theme = useTheme();
     const [t] = useTranslation('common', { keyPrefix: 'header' })
@@ -11,7 +11,7 @@ export const NavigationComponent = () => {
     const arr = [
         {
             name: t('homeText'),
-            handleClick: () => navigate("/")
+            handleClick: () => window.scrollTo({ top: 0, behavior: "smooth" })
         },
         {
             name: t('aboutText'),
@@ -23,7 +23,7 @@ export const NavigationComponent = () => {
         },
         {
             name: t('projectsText'),
-            handleClick: () => document.getElementById('contactUs')?.scrollIntoView({ behavior: 'smooth' })
+            handleClick: () => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
         },
         {
             name: t('contactText'),
@@ -34,11 +34,11 @@ export const NavigationComponent = () => {
     return (
         <>
 
-            <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={3} bgcolor={theme.palette.primary.main} >
+            <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={3} bgcolor={backgroundColor || theme.palette.primary.main} >
                 {
                     location.pathname === '/' ? arr.map((i: any, idx: number) => (
                         <motion.div whileHover={{ scale: 1.1 }}>
-                            <Typography color={'#FFFFFF'}
+                            <Typography color={color || '#FFFFFF'}
                                 onClick={i.handleClick}
                                 sx={{
                                     opacity: 0.4,
@@ -53,7 +53,7 @@ export const NavigationComponent = () => {
                     ))
                         : <motion.div whileHover={{ scale: 1.1 }}>
                             <Typography color={'#FFFFFF'}
-                                onClick={arr[0].handleClick}
+                                onClick={() => navigate('/')}
                                 sx={{
                                     zIndex: 10,
                                     opacity: 0.4,
