@@ -60,5 +60,17 @@
     },
     "footer": {
         "copyrightText": "All Rights Reserved."
+    },
+    "projects": {
+        "backHome": "Back Home",
+        "ourTopProjects": "Our Top Projects",
+        "seeAllProjects": "See All Projects",
+        "ourProjects": "Our Projects",
+        "all": "All",
+        "domain": "Category",
+        "clientName": "Client Name",
+        "githubLink": "GitHub Link",
+        "websiteUrl": "Website Link",
+        "finishDate": "Finish Date"
     }
 }

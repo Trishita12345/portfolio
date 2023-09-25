@@ -1,9 +1,9 @@
 import { Box, Grid, IconButton, Typography, useMediaQuery, useTheme } from "@mui/material"
 import { useTranslation } from "react-i18next";
-import { theme } from "../../theme";
+import { theme } from "../../../theme";
 import { MdDrafts } from "react-icons/md";
 import { FaBuilding } from "react-icons/fa"
-import { images } from "../../Assets/images";
+import { images } from "../../../Assets/images";
 
 const LeftSection = () => {
     const theme = useTheme();

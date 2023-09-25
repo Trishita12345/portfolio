@@ -1,4 +1,4 @@
-import { Box, Button, Fab, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { BottomNavigation, BottomNavigationAction, Box, Button, Fab, FormControlLabel, FormGroup, IconButton, Paper, Switch, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { images } from '../Assets/images';
 import { theme } from '../theme';
 import { useEffect, useState } from 'react';
@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { PiSuitcaseSimpleLight } from 'react-icons/pi';
 import { NavigationComponent } from './NavigationComponent';
+import FixedBottomNavigation from './BottomNavigation';
 
 export const LogoComponent = () => {
     const navigate = useNavigate();
@@ -21,6 +22,7 @@ export const LogoComponent = () => {
 
 const LanguageComponent = () => {
     const theme = useTheme();
+    const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
     const [t, i18n] = useTranslation('common')
     const langStyleSelected = {
         color: '#FFFFFF',
@@ -33,14 +35,31 @@ const LanguageComponent = () => {
     }
 
     return (
-        <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={2} bgcolor={theme.palette.primary.main} px={1}>
-            <Typography sx={i18n.language === 'en' ? langStyleSelected : langStyleNotSelected} onClick={() => i18n.changeLanguage('en')}>
-                En
-            </Typography>
-            <Typography sx={i18n.language === 'fr' ? langStyleSelected : langStyleNotSelected} onClick={() => i18n.changeLanguage('fr')}>
-                Fr
-            </Typography>
-        </Box>)
+        <>
+            {!screenSizeDownSm ?
+                <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={2} bgcolor={theme.palette.primary.main} px={1}>
+                    <Typography sx={i18n.language === 'en' ? langStyleSelected : langStyleNotSelected} onClick={() => i18n.changeLanguage('en')}>
+                        En
+                    </Typography>
+                    <Typography sx={i18n.language === 'fr' ? langStyleSelected : langStyleNotSelected} onClick={() => i18n.changeLanguage('fr')}>
+                        Fr
+                    </Typography>
+                </Box>
+                :
+                <FormGroup sx={{
+                    '.MuiFormControlLabel-root': {
+                        color: 'white'
+                    }
+                }}>
+                    <FormControlLabel
+                        control={
+                            <Switch defaultChecked color="secondary" onChange={() => i18n.language === 'en' ? i18n.changeLanguage('fr') : i18n.changeLanguage('en')} />
+                        }
+                        label={i18n.language === 'en' ? 'En' : 'Fr'} />
+                </FormGroup >
+            }
+        </>
+    )
 }
 
 
@@ -51,12 +70,12 @@ const Header = () => {
     const screenSizeUpMd = useMediaQuery(theme.breakpoints.up('md'))
     const screenSizeDownMd = useMediaQuery(theme.breakpoints.down('md'))
     const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
-    const screenSizeDown500 = useMediaQuery(theme.breakpoints.down(500))
 
 
     const getPaddingX = () => {
         if (screenSizeUpLg) return 10;
         else if (screenSizeUpMd && !screenSizeUpLg) return 5
+        else if (screenSizeDownMd) return 2
     }
 
     return (
@@ -68,16 +87,14 @@ const Header = () => {
             <LogoComponent />
             {!screenSizeDownMd && <NavigationComponent />}
             <Box display={'flex'} alignItems={'center'} gap={2}>
-                {!screenSizeDownSm && <LanguageComponent />}
-                {!screenSizeDown500
+                <LanguageComponent />
+                {!screenSizeDownSm
                     ? <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize' }}>{t('hireMeText')}</Button>
-                    : <Fab sx={{ position: "fixed", bottom: 30, right: 30, backgroundColor: "#fba920", color: "black" }}>
+                    : <Fab sx={{ position: "fixed", bottom: 70, right: 30, backgroundColor: theme.palette.secondary.main, color: "white" }}>
                         <PiSuitcaseSimpleLight size={"20px"} />
                     </Fab>
                 }
-                {screenSizeDownMd && <IconButton sx={{ color: '#FFFFFF' }} size='large'>
-                    <IoReorderFour />
-                </IconButton>}
+                {screenSizeDownMd && <FixedBottomNavigation />}
             </Box>
         </Box >
     );

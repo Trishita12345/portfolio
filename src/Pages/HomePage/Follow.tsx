@@ -38,7 +38,7 @@ const Follow = () => {
         link: "https://www.linkedin.com"
     }]
     return (
-        <Box marginY={5} display={"flex"} flexDirection={"column"} alignItems={"center"} overflow={"hidden"} position={"relative"}>
+        <Box marginY={5} display={"flex"} flexDirection={"column"} alignItems={"center"} overflow={"hidden"} position={"relative"} id={'followUs'}>
             <img src={images.SideImg} style={{ position: "absolute", left: 0, bottom: 10, width: "150px", opacity: 0.8, }} />
             <Typography variant="h4" fontWeight={"bold"} sx={{ color: theme.palette.primary.dark }}>{t('title')}</Typography>
             <Grid container marginY={2} justifyContent={"center"} marginX={2}>

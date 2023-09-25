@@ -23,6 +23,7 @@ const Home = () => {
     return (
         <>
             <Box
+                id={'home'}
                 sx={{
                     backgroundImage: `url(${images.BackgroundImage})`, position: 'relative',
                     overflow: 'clip',
@@ -53,8 +54,18 @@ const Home = () => {
                             justifyContent={screenSizeDownMd ? "center" : "start"}
                             flexDirection={screenSizeDownSm ? 'column' : 'row'}
                         >
-                            <Button color='secondary' sx={{ textTransform: 'capitalize', px: 3, py: 2 }} variant='contained'>{t('getInTouchText')}</Button>
-                            <Button color='secondary' sx={{ textTransform: 'capitalize', px: 3, py: 2 }} variant='contained'>{t('projectViewText')}</Button>
+                            <Button color='secondary'
+                                sx={{ textTransform: 'capitalize', px: 3, py: 2 }}
+                                variant='contained'
+                                onClick={() => document.getElementById('followUs')?.scrollIntoView({ behavior: 'smooth' })}
+                            >
+                                {t('getInTouchText')}
+                            </Button>
+                            <Button color='secondary' sx={{ textTransform: 'capitalize', px: 3, py: 2 }} variant='contained'
+                                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                            >
+                                {t('projectViewText')}
+                            </Button>
                         </Box>
                     </Box>
                     <Box component={'img'} src={images.myImage} sx={{
