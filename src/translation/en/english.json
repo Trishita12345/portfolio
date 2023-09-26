@@ -59,7 +59,9 @@
         "addressValue": "Flat no: GN OAK, Hiland Woods, Street no: 626,   action area: IIC, Newtown, Kolkata - 700157"
     },
     "footer": {
-        "copyrightText": "All Rights Reserved."
+        "copyrightText": "All Rights Reserved.",
+        "backToTop": "Back to Top",
+        "heading": "If You Have Any Question Feel Free To Call "
     },
     "projects": {
         "backHome": "Back Home",
