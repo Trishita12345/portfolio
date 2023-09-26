@@ -22,6 +22,9 @@
         "aboutText": "Développeur Web full stack avec plus de 3 ans d'expérience dans la création d'applications Web gourmandes en données avec React JS et Spring Boot avec SQL Server. J'ai construit quelques projets Flutter. J'ai une compréhension approfondie du SDLC complet avec des compétences en HTML5, CSS, Javascript, React JS, Redux, Web API, Java Spring Boot, Flutter, Dart JS, SQL, Git., JIRA.",
         "downloadCvText": "Télécharger CV"
     },
+    "expertize": {
+        "header": "Nous disposons d'une expertise avec les outils les plus puissants au monde"
+    },
     "skills": {
         "title": "Expérience et compétences",
         "frontend": "Développement frontend",
@@ -54,6 +57,20 @@
         "addressValue": "Appartement n°: GN OAK, Hiland Woods, rue n°: 626, zone d'action: IIC, Newtown, Kolkata - 700157"
     },
     "footer": {
-        "copyrightText": "Tous droits réservés."
+        "copyrightText": "Tous droits réservés.",
+        "backToTop": "Retour en haut",
+        "heading": "Si vous avez des questions, n'hésitez pas à appeler"
+    },
+    "projects": {
+        "backHome": "Retour à la maison",
+        "ourTopProjects": "Nos meilleurs projets",
+        "seeAllProjects": "Voir tous les projets",
+        "ourProjects": "Nos Projets",
+        "tous": "Tous",
+        "domain": "Catégorie",
+        "clientName": "Nom du client",
+        "githubLink": "Lien GitHub",
+        "websiteUrl": "Lien vers le site Web",
+        "finishDate": "Date de fin"
     }
 }

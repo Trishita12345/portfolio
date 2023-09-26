@@ -13,7 +13,6 @@ import { BiSolidGroup } from 'react-icons/bi';
 
 export default function FixedBottomNavigation() {
     const [value, setValue] = React.useState(0);
-    const ref = React.useRef<HTMLDivElement>(null);
     const [t] = useTranslation('common', { keyPrefix: 'header' })
 
     const arr = [
@@ -45,22 +44,19 @@ export default function FixedBottomNavigation() {
     ];
 
     return (
-        <Box sx={{ pb: 7 }} ref={ref}>
-            <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={10}>
-                <BottomNavigation
-                    sx={{ zIndex: '1000000', backgroundColor: '#FBA91F' }}
-                    showLabels
-                    value={value}
-                    onChange={(event, newValue) => {
-                        setValue(newValue);
-                    }}
-                >
-                    {/* <NavigationComponent backgroundColor="white" color={'red'} /> */}
-                    {arr.map((i: any) => <BottomNavigationAction label={i.name} onClick={i.handleClick} icon={i.icon}
-                    />)}
-                </BottomNavigation>
-            </Paper>
-        </Box>
+        <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 10000, width: "100vw" }} elevation={10} >
+            <BottomNavigation
+                sx={{ backgroundColor: '#FBA91F', width: "100%" }}
+                showLabels
+                value={value}
+                onChange={(event, newValue) => {
+                    setValue(newValue);
+                }}
+            >
+                {arr.map((i: any) => <BottomNavigationAction style={{ padding: 2, }} label={i.name} onClick={i.handleClick} icon={i.icon}
+                />)}
+            </BottomNavigation>
+        </Paper>
     );
 }
 
