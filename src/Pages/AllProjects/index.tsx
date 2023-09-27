@@ -2,7 +2,7 @@ import { AppBar, Box, Fab, Grid, IconButton, Tab, Tabs, Typography, useMediaQuer
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { ProjectItems } from "../../components/ProjectItems";
-import { projectData } from "../../projectData";
+import { projectData } from "../../data/projectData";
 import { BiArrowBack } from "react-icons/bi";
 import { AiFillHome } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";

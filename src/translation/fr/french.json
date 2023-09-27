@@ -23,7 +23,16 @@
         "downloadCvText": "Télécharger CV"
     },
     "expertize": {
-        "header": "Nous disposons d'une expertise avec les outils les plus puissants au monde"
+        "header": "Nous disposons d'une expertise avec les outils les plus puissants au monde",
+        "description": "",
+        "reactJsDesc": "ReactJS est une bibliothèque JavaScript frontale gratuite et open source permettant de créer des interfaces utilisateur basées sur des composants. Il est maintenu par Meta (anciennement Facebook)",
+        "muiDesc": "Material UI est beau de par sa conception et propose une suite d'options de personnalisation qui facilitent la mise en œuvre de votre propre système de conception personnalisé.",
+        "vscodeDesc": "Visual Studio Code, également communément appelé VS Code, est un éditeur de code source créé par Microsoft avec Electron Framework, pour Windows, Linux et macOS.",
+        "reduxDesc": "Redux est une bibliothèque JavaScript open source permettant de gérer et de centraliser l'état des applications. Il est le plus couramment utilisé avec React ou Angular pour créer des interfaces utilisateur.",
+        "springDesc": "Spring Boot Extension est la solution de convention sur configuration de Spring pour créer des applications Spring de qualité production avec un minimum de configuration.",
+        "nodeDesc": "Node.js est un environnement de serveur open source multiplateforme qui peut fonctionner sous Windows, Linux, Unix, macOS, etc. Node.js est un environnement d'exécution JavaScript back-end",
+        "firebaseDesc": "Firebase, Inc. est un ensemble de services de cloud computing back-end et de plateformes de développement d'applications fournis par Google. Il héberge des bases de données, des services, des authentifications",
+        "databaseDesc": "MySQL est un système de gestion de bases de données relationnelles (SGBDR) open source. SQL est un langage que les programmeurs utilisent pour créer, modifier et extraire des données de la base de données relationnelle, ainsi que pour contrôler l'accès des utilisateurs à la base de données."
     },
     "skills": {
         "title": "Expérience et compétences",

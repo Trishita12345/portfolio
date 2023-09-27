@@ -1,14 +1,10 @@
 import { Box, Divider, Link, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { images } from "../Assets/images";
-import { FaReact } from 'react-icons/fa'
-import { SiMui, SiRedux, SiVisualstudio, SiNodemon, SiFirebase } from 'react-icons/si'
-import { BiLogoSpringBoot } from 'react-icons/bi'
-import { BsDatabaseAdd } from 'react-icons/bs'
-import { motion } from 'framer-motion'
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { expertizeData } from "../data/expertizeData";
 
 const Expertize = () => {
     const theme = useTheme();
@@ -40,16 +36,7 @@ const Expertize = () => {
         else if (screenSizeDown464) return 3;
     }
 
-    const expArray = [
-        { icon: <FaReact style={{ fontSize: '70px' }} />, label: 'React JS', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', url: 'https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies' },
-        { icon: <SiMui style={{ fontSize: '70px' }} />, label: 'Material UI', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', url: 'https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies' },
-        { icon: <SiVisualstudio style={{ fontSize: '70px' }} />, label: 'Visual Studio', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', url: 'https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies' },
-        { icon: <SiRedux style={{ fontSize: '70px' }} />, label: 'Redux', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', url: 'https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies' },
-        { icon: <BiLogoSpringBoot style={{ fontSize: '70px' }} />, label: 'Spring Boot', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', url: 'https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies' },
-        { icon: <SiNodemon style={{ fontSize: '70px' }} />, label: 'Node JS', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', url: 'https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies' },
-        { icon: <SiFirebase style={{ fontSize: '70px' }} />, label: 'Firebase', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', url: 'https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies' },
-        { icon: <BsDatabaseAdd style={{ fontSize: '70px' }} />, label: 'MySQL', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', url: 'https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies' }
-    ]
+    const expArray = expertizeData(t);
 
     const responsive = {
         desktop: {
@@ -80,7 +67,7 @@ const Expertize = () => {
                 <img src={images.Rectangle42} style={{ position: 'absolute', top: 0, right: 0 }} />
             }
             <Box width={!screenSizeUp1025 ? screenSizeDown464 ? '90%' : '75%' : '50%'} sx={{ px: getPaddingX() }}>
-                <Typography color={'white'} variant="h4" fontWeight={600}>{t('header')}</Typography>
+                <Typography color={'white'} variant="h4" fontWeight={'bold'}>{t('header')}</Typography>
                 <Typography color={'white'} fontSize={'12px'} mt={4} mb={1}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mollis leo est, ac suscipit quam pellentesque nec. Fusce tempor elit lectus, vitae pretium libero feugiat vitae. Sed eget purus nisi.
                 </Typography>
@@ -110,6 +97,7 @@ const Expertize = () => {
                     {expArray.map((item: any, index: number) => (
                         <Box sx={{
                             minWidth: '200px',
+                            minHeight: '400px',
                             px: 2,
                             py: 4,
                             [theme.breakpoints.up(600)]: {
@@ -122,12 +110,13 @@ const Expertize = () => {
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
+                            justifyContent: 'space-evenly',
                             color: 'white',
                             gap: 4,
                         }}>
                             {item.icon}
                             <Typography variant="h5" fontWeight={600}>{item.label}</Typography>
-                            <Typography textAlign={'center'}>{item.description}</Typography>
+                            <Typography textAlign={'center'} fontSize={'12px'}>{item.description}</Typography>
                             <Link href={item.url} target="_blank" underline="none">
                                 <Typography sx={{ color: 'white' }}>Read More</Typography>
                             </Link>

@@ -12,15 +12,15 @@ const LeftSection = () => {
 
     return (
         <>
-            {/* <Typography fontWeight={600} fontSize={'18px'}>{t('contactus')}</Typography> */}
-            <Typography fontWeight={600} fontSize={screenSizeDownSm ? '26px' : '35px'}>
+            {/* <Typography fontWeight={'bold'} fontSize={'18px'}>{t('contactus')}</Typography> */}
+            <Typography fontWeight={'bold'} fontSize={screenSizeDownSm ? '26px' : '35px'}>
                 {t('header1')} < br /> {t('header2')}
             </Typography>
             <Box display='flex' alignItems={'center'} mt={5}>
                 <IconButton sx={{ borderRadius: '50%', backgroundColor: theme.palette.secondary.light, height: '50px', width: '50px' }}>
                     <MdDrafts color={theme.palette.secondary.main} />
                 </IconButton>
-                <Typography fontWeight={600} variant="h5">&nbsp; &nbsp;{t('contactus')}</Typography>
+                <Typography fontWeight={'bold'} variant="h5">&nbsp; &nbsp;{t('contactus')}</Typography>
             </Box>
             <Typography mt={2} ml={1} fontWeight={500}>
                 {t('phone')} : +91-8016970670
@@ -32,7 +32,7 @@ const LeftSection = () => {
                 <IconButton sx={{ borderRadius: '50%', backgroundColor: "#fef2dd", height: '50px', width: '50px' }}>
                     <FaBuilding color={'#fba920'} />
                 </IconButton>
-                <Typography fontWeight={600} variant="h5">&nbsp; &nbsp;{t('address')}</Typography>
+                <Typography fontWeight={'bold'} variant="h5">&nbsp; &nbsp;{t('address')}</Typography>
             </Box>
             <Typography mt={2} ml={1} fontWeight={500}>
                 {t('addressValue')}

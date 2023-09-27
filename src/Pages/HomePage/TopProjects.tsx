@@ -1,13 +1,10 @@
-import { Box, Fab, Grid, IconButton, Link, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Link, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { images } from "../../Assets/images";
-import { motion, useAnimate } from 'framer-motion'
-import { BsArrowRight } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { ProjectItems } from "../../components/ProjectItems";
-import { projectData } from "../../projectData";
+import { projectData } from "../../data/projectData";
 
-const projectIndexes = [0, 1, 4]
+const projectIds = [1]
 
 const TopProjects = () => {
     const navigate = useNavigate();
@@ -23,10 +20,11 @@ const TopProjects = () => {
             bgcolor={'#F3F7FF'}
             py={8} px={4}
         >
-            <Typography textAlign={'center'} variant={screenSizeDownSm ? "h4" : "h3"} mb={6} color={theme.palette.primary.dark} fontWeight={600}>
+            <Typography textAlign={'center'} variant={screenSizeDownSm ? "h4" : "h3"} mb={6} color={theme.palette.primary.dark} fontWeight={'bold'}>
                 {t('ourTopProjects')}
             </Typography>
-            <ProjectItems data={projectIndexes.map((i: any) => projects[i])} />
+            <ProjectItems data={projectIds.map((i: any) => projects[i - 1])} />
+            {/* <ProjectItems data={projects.filter((i: any) => i.isTopProject)} /> */}
             <Link onClick={() => navigate('/all-projects')} color={'secondary'}>
                 <Typography
                     sx={{

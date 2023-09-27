@@ -1,7 +1,7 @@
 import { Box, Fab, Grid, IconButton, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import { projectData } from "../../projectData";
+import { projectData } from "../../data/projectData";
 import { motion, useAnimate } from 'framer-motion'
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
@@ -78,7 +78,7 @@ const ProjectById = () => {
                         </motion.div>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                        <Typography variant={screenSizeDownSm ? "h5" : "h4"} fontWeight={600} color={theme.palette.primary.dark}>{data.name}</Typography>
+                        <Typography variant={screenSizeDownSm ? "h5" : "h4"} fontWeight={'bold'} color={theme.palette.primary.dark}>{data.name}</Typography>
                         <Typography color={theme.palette.primary.dark} mt={2} fontSize={screenSizeDownSm ? '12px' : '14px'}>{data.description}</Typography>
                         <Grid container mt={2} color={theme.palette.primary.dark} fontSize={'14px'}>
                             <Grid item xs={5} sm={3}>

@@ -41,7 +41,7 @@ const ProjectItem = ({ item }: { item: any }) => {
                 </Fab>
                 <img src={item.imgSrc} />
             </motion.div>
-            <Typography variant="h6" color={theme.palette.primary.dark} mt={1} fontWeight={600}>
+            <Typography variant="h6" color={theme.palette.primary.dark} mt={1} fontWeight={'bold'}>
                 {item.name}
             </Typography>
         </Grid>
@@ -49,9 +49,6 @@ const ProjectItem = ({ item }: { item: any }) => {
 }
 
 export const ProjectItems = ({ data }: { data: any }) => {
-    const theme = useTheme();
-    const screenSizeDownLg = useMediaQuery(theme.breakpoints.down('lg'))
-    const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (<Grid container justifyContent={'space-evenly'} alignItems={'center'} rowSpacing={2}>
         {data.map((item: any) => <ProjectItem item={item} />)}

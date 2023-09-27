@@ -32,7 +32,7 @@ const About = () => {
                         <FadeIn>
                             <Box display={'flex'} flexDirection={'column'} gap={4}>
 
-                                <Typography sx={{ color: theme.palette.primary.dark }} variant='h4' fontWeight={600}>
+                                <Typography sx={{ color: theme.palette.primary.dark }} variant='h4' fontWeight={'bold'}>
                                     {t('header1')}
                                 </Typography>
 
@@ -41,19 +41,19 @@ const About = () => {
                                     <IconButton sx={{ borderRadius: '50%', backgroundColor: theme.palette.secondary.light, height: '30px', width: '30px' }}>
                                         <MdDrafts color='secondary' style={{ fontSize: '16px' }} />
                                     </IconButton>
-                                    <Typography sx={{ fontSize: '12px', fontWeight: 600 }} color="secondary"><u>psubhajit14@gmail.com</u></Typography>
+                                    <Typography sx={{ fontSize: '12px', fontWeight: 'bold' }} color="secondary"><u>psubhajit14@gmail.com</u></Typography>
 
                                 </Box>
                                 <Grid container gap={3}>
                                     <Grid item xs={3}>
                                         <Box display={'flex'} gap={1} alignItems='center'>
-                                            <Typography variant='h3' fontWeight={600} sx={{ color: theme.palette.primary.light }}>3</Typography>
+                                            <Typography variant='h3' fontWeight={'bold'} sx={{ color: theme.palette.primary.light }}>3</Typography>
                                             <Typography sx={{ fontSize: '12px' }}>{t('expText')} </Typography>
                                         </Box>
                                     </Grid>
                                     <Grid item xs={3}>
                                         <Box display={'flex'} gap={1} alignItems='center'>
-                                            <Typography variant='h3' fontWeight={600} sx={{ color: '#FAA314' }}>20+</Typography>
+                                            <Typography variant='h3' fontWeight={'bold'} sx={{ color: '#FAA314' }}>20+</Typography>
                                             <Typography sx={{ fontSize: '12px' }}>{t('expText')} </Typography>
                                         </Box>
                                     </Grid>
@@ -65,7 +65,7 @@ const About = () => {
                     <Grid item xs={12} md={6}>
                         <FadeIn direction='right'>
                             <Box display={'flex'} flexDirection={'column'} gap={4}>
-                                <Typography sx={{ color: theme.palette.primary.dark }} variant='h4' fontWeight={600}>
+                                <Typography sx={{ color: theme.palette.primary.dark }} variant='h4' fontWeight={'bold'}>
                                     {t('header2')}{t('header3')}
                                 </Typography>
                                 <Typography fontSize={'12px'}>{t('aboutText')}</Typography>
