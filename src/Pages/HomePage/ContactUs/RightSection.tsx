@@ -31,7 +31,7 @@ const RightSection = () => {
 
     return (
         <>
-            <Typography fontWeight={600} fontSize={'18px'} color={theme.palette.primary.dark}>{t('writeToUs')}</Typography>
+            <Typography fontWeight={'bold'} fontSize={'18px'} color={theme.palette.primary.dark}>{t('writeToUs')}</Typography>
             <TextField
                 sx={{ mt: 4 }}
                 fullWidth

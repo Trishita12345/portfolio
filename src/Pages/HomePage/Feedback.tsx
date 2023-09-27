@@ -64,7 +64,7 @@ const Feedback = () => {
             px={screenSizeDownMd ? screenSizeDownSm ? 0 : 4 : 10}
             py={8}
         >
-            <Typography textAlign={'center'} variant={screenSizeDownSm ? "h4" : "h3"} mb={2} color={'white'} fontWeight={600}>{t('title')}</Typography>
+            <Typography textAlign={'center'} variant={screenSizeDownSm ? "h4" : "h3"} mb={2} color={'white'} fontWeight={'bold'}>{t('title')}</Typography>
             <Carousel
                 swipeable={true}
                 draggable={true}

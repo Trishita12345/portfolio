@@ -1,11 +1,7 @@
-import { BottomNavigation, BottomNavigationAction, Box, Button, Fab, FormControlLabel, FormGroup, IconButton, Paper, Switch, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, Fab, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { images } from '../Assets/images';
-import { theme } from '../theme';
-import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { IoReorderFour } from 'react-icons/io5';
-import { motion } from 'framer-motion'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { PiSuitcaseSimpleLight } from 'react-icons/pi';
 import { NavigationComponent } from './NavigationComponent';
 import FixedBottomNavigation from './BottomNavigation';
@@ -14,7 +10,7 @@ export const LogoComponent = () => {
     const navigate = useNavigate();
     return (
         <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
-            <img src={images.MyLogo} onClick={() => navigate('/')} style={{ cursor: 'pointer' }} />
+            <img src={images.FullLogo} onClick={() => navigate('/')} style={{ cursor: 'pointer' }} />
         </Box>)
 }
 
@@ -46,17 +42,15 @@ const LanguageComponent = () => {
                     </Typography>
                 </Box>
                 :
-                <FormGroup sx={{
-                    '.MuiFormControlLabel-root': {
-                        color: 'white'
+                <Button variant='contained' sx={{
+                    backgroundColor: theme.palette.primary.light,
+                    ":focus": {
+                        backgroundColor: theme.palette.primary.light,
                     }
-                }}>
-                    <FormControlLabel
-                        control={
-                            <Switch defaultChecked color="secondary" onChange={() => i18n.language === 'en' ? i18n.changeLanguage('fr') : i18n.changeLanguage('en')} />
-                        }
-                        label={i18n.language === 'en' ? 'En' : 'Fr'} />
-                </FormGroup >
+                }}
+                    onClick={() => i18n.language === 'en' ? i18n.changeLanguage('fr') : i18n.changeLanguage('en')}>
+                    {i18n.language}
+                </Button>
             }
         </>
     )
@@ -84,7 +78,9 @@ const Header = () => {
             sx={{
                 backgroundImage: `url(${images.BackgroundImage})`
             }}>
-            <LogoComponent />
+            <Box bgcolor={theme.palette.primary.main}>
+                {!screenSizeDownMd ? <LogoComponent /> : <img src={images.LogoText} />}
+            </Box>
             {!screenSizeDownMd && <NavigationComponent />}
             <Box display={'flex'} alignItems={'center'} gap={2}>
                 <LanguageComponent />
