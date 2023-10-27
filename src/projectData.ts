@@ -1,4 +1,4 @@
-import { images } from "../../src/Assets/images"
+import { images } from "../src/Assets/images"
 
 export const projectData = (t: any) =>
 ({

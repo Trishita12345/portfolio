@@ -2,7 +2,7 @@ import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from "@mui/mat
 import { images } from "../Assets/images";
 import { useTranslation } from "react-i18next";
 import { LogoComponent } from "./Header";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { NavigationComponent } from "./NavigationComponent";
 import { motion } from "framer-motion";
 
@@ -11,6 +11,7 @@ const Footer = () => {
     const [t_footer] = useTranslation('common', { keyPrefix: 'footer' })
     const navigate = useNavigate();
     const theme = useTheme();
+    const location = useLocation();
     const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
 
     return <Box height={screenSizeDownSm ? "900px" : "700px"} position={"relative"}>
@@ -24,7 +25,15 @@ const Footer = () => {
                     </Grid>
                     <Grid item xs={10} md={3}>
                         <Button color='secondary' size="large" sx={{ textTransform: 'capitalize' }} variant='contained'
-                            onClick={() => document.getElementById('followUs')?.scrollIntoView({ behavior: 'smooth' })}
+                            onClick={() => {
+                                if (location.pathname === '/')
+                                    document.getElementById('followUs')?.scrollIntoView({ behavior: 'smooth' })
+                                else if (location.pathname === "/contact-us")
+                                    window.scrollTo({ top: 0, behavior: "smooth" })
+                                else
+                                    navigate("/contact-us")
+                            }
+                            }
                         >{t('getInTouchText')}</Button>
                     </Grid>
                 </Grid>

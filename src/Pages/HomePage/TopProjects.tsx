@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ProjectItems } from "../../components/ProjectItems";
 import { projectData } from "../../data/projectData";
 
-const projectIds = [1]
+const projectIndexes = [1, 2]
 
 const TopProjects = () => {
     const navigate = useNavigate();
@@ -23,7 +23,7 @@ const TopProjects = () => {
             <Typography textAlign={'center'} variant={screenSizeDownSm ? "h4" : "h3"} mb={6} color={theme.palette.primary.dark} fontWeight={'bold'}>
                 {t('ourTopProjects')}
             </Typography>
-            <ProjectItems data={projectIds.map((i: any) => projects[i - 1])} />
+            <ProjectItems data={projectIndexes.map((i: any) => projects[i - 1])} />
             {/* <ProjectItems data={projects.filter((i: any) => i.isTopProject)} /> */}
             <Link onClick={() => navigate('/all-projects')} color={'secondary'}>
                 <Typography

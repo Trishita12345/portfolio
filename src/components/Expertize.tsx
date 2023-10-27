@@ -68,8 +68,8 @@ const Expertize = () => {
             }
             <Box width={!screenSizeUp1025 ? screenSizeDown464 ? '90%' : '75%' : '50%'} sx={{ px: getPaddingX() }}>
                 <Typography color={'white'} variant="h4" fontWeight={'bold'}>{t('header')}</Typography>
-                <Typography color={'white'} fontSize={'12px'} mt={4} mb={1}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mollis leo est, ac suscipit quam pellentesque nec. Fusce tempor elit lectus, vitae pretium libero feugiat vitae. Sed eget purus nisi.
+                <Typography color={'white'} fontSize={'16px'} mt={4} mb={1}>
+                    Till now we have worked on lot of frontend and backend technologies. Technologies we have expertize and can provide supports are -
                 </Typography>
             </Box>
             {screenSizeUp464 && !screenSizeUp1025 && <Box sx={{ display: 'flex', justifyContent: 'end' }}>

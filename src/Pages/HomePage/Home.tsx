@@ -1,10 +1,11 @@
 import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { images } from '../../Assets/images';
-import Header from '../../components/Header';
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineInstagram } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
 import './styling.css';
-import { BsWhatsapp } from 'react-icons/bs';
+import { MotionBox } from '../../components/MotionBox';
+import { useEffect, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { BiLogoWhatsapp } from 'react-icons/bi';
 import { motion } from "framer-motion";
 
@@ -16,12 +17,21 @@ const Home = () => {
         fontSize: '18px',
         cursor: 'pointer',
         color: theme.palette.primary.light,
-        ':hover': {
-            color: '#FFFFFF'
-        }
+        // ':hover': {
+        //     color: '#FFFFFF'
+        // }
     }
     const [t] = useTranslation('common', { keyPrefix: 'home' })
+    const [person, setPerson] = useState("Subhajit Paul");
+    useEffect(() => {
+        setTimeout(() => {
+            if (person === "Subhajit Paul")
+                setPerson("Trishita Majumder")
+            else
+                setPerson("Subhajit Paul")
 
+        }, 4000)
+    }, [person])
 
     return (
         <>
@@ -70,9 +80,15 @@ const Home = () => {
                     </motion.div>
                 </Box>
                 <Box display={'flex'} flexDirection={screenSizeDownMd ? 'column' : 'row'} justifyContent={screenSizeDownMd ? 'center' : 'space-between'}>
-                    <Box display={'flex'} flexDirection={'column'} pl={8} alignItems={screenSizeDownMd ? 'center' : 'start'} flex={7} justifyContent={"center"}>
-                        <Typography color={'#FFFFFF'} variant={screenSizeDownSm ? 'h4' : 'h3'} fontWeight={'bold'} whiteSpace={screenSizeDownSm ? 'normal' : 'nowrap'} textAlign={screenSizeDownMd ? 'center' : 'start'}>
-                            {t('heading1')} <br /> Subhajit Paul <br /> {t('heading2')}
+                    <MotionBox initial={{ y: 50 }} animate={{
+                        y: -50,
+                        transition: {
+                            duration: 4,
+                            repeat: Infinity,
+                        }
+                    }} display={'flex'} flexDirection={'column'} pl={8} alignItems={screenSizeDownMd ? 'center' : 'start'} flex={7} justifyContent={"center"}>
+                        <Typography color={'#FFFFFF'} variant={screenSizeDownSm ? 'h4' : 'h3'} fontWeight={600} whiteSpace={screenSizeDownSm ? 'normal' : 'nowrap'} textAlign={screenSizeDownMd ? 'center' : 'start'}>
+                            {t('heading1')} <br /> {person} <br /> {t('heading2')}
                         </Typography>
                         <Box display={'flex'} gap={2} mt={screenSizeDownMd ? 2 : 6} mb={6}
                             width={"100%"}
@@ -93,14 +109,29 @@ const Home = () => {
                                 {t('projectViewText')}
                             </Button>
                         </Box>
-                    </Box>
-                    <Box component={'img'} src={images.myImage} sx={{
+                    </MotionBox>
+                    <AnimatePresence >
+                        {person === "Subhajit Paul" ? <Box component={'img'} src={images.myImage} sx={{
+                            placeSelf: 'center',
+                            zIndex: 1000, height: '700px', [theme.breakpoints.down('md')]: {
+                                width: '400px',
+                                height: '400px'
+                            }
+                        }} /> : <Box component={'img'} src={images.Logo} sx={{
+                            placeSelf: 'center',
+                            zIndex: 1000, height: '700px', [theme.breakpoints.down('md')]: {
+                                width: '400px',
+                                height: '400px'
+                            }
+                        }} />}
+                    </AnimatePresence>
+                    {/* <Box component={'img'} src={images.myImage} sx={{
                         placeSelf: 'center',
                         zIndex: 1000, height: '700px', [theme.breakpoints.down('md')]: {
                             width: '400px',
                             height: '400px'
                         }
-                    }} />
+                    }} /> */}
                 </Box >
             </Box >
         </>

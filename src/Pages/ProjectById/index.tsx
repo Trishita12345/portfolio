@@ -1,4 +1,4 @@
-import { Box, Fab, Grid, IconButton, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Chip, Fab, Grid, IconButton, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { projectData } from "../../data/projectData";
@@ -135,7 +135,7 @@ const ProjectById = () => {
                             </Grid>
                         }
                         {data.finishDate &&
-                            <Grid container mt={1} color={theme.palette.primary.dark} fontSize={'14px'}>
+                            <Grid container my={1} color={theme.palette.primary.dark} fontSize={'14px'}>
                                 <Grid item xs={5} sm={3}>
                                     <Typography sx={headerStyle}>{t('finishDate')}</Typography>
                                 </Grid>
@@ -145,6 +145,15 @@ const ProjectById = () => {
                                 <Grid item xs={6}>
                                     <Typography sx={textStyle}>{data.finishDate}</Typography>
                                 </Grid>
+                            </Grid>
+                        }
+                        {data.tags &&
+                            <Grid container mt={2} spacing={2}>
+                                {data.tags.map((tag: any, index: number) => {
+                                    return <Grid item>
+                                        <Chip label={tag} color='secondary' />
+                                    </Grid>
+                                })}
                             </Grid>
                         }
                     </Grid>

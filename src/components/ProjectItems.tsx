@@ -9,7 +9,7 @@ const ProjectItem = ({ item }: { item: any }) => {
     const theme = useTheme();
     const navigate = useNavigate();
     const [scope, animate] = useAnimate();
-
+    console.log("Item: ", item)
     return (
         <Grid item sx={{ overflow: 'hidden' }}>
             <motion.div

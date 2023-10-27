@@ -1,7 +1,7 @@
 import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material"
 
 import { MdSchool } from 'react-icons/md'
-import { FaDatabase, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { FaDatabase, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
 import { BsCloudsFill } from 'react-icons/bs'
 import { GrDeploy } from 'react-icons/gr'
 import { PiProjectorScreenChartLight } from 'react-icons/pi'
@@ -30,6 +30,8 @@ const getIcon = (Icon: string, color: string): React.ReactNode => {
             return <FaInstagram style={{ color: color, fontSize: "30px" }} />
         case "linkedin":
             return <FaLinkedinIn style={{ color: color, fontSize: "30px" }} />
+        case "whatsapp":
+            return <FaWhatsapp style={{ color: color, fontSize: "30px" }} />
     }
     return null;
 }

@@ -12,7 +12,7 @@ export const RouterComponent: React.FC<any> = () => {
             <Route index element={<HomePage />} />
             <Route path="project/:id" element={<ProjectById />} />
             <Route path="all-projects" element={<AllProjects />} />
-            {/* <Route path="contact-us" element={<ContactUs />} /> */}
+            <Route path="contact-us" element={<ContactUs />} />
             {/* <Route path="*" element={<Result
                 status="404"
                 title="404"

@@ -9,7 +9,19 @@ const RightSection = () => {
     const theme = useTheme();
     const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
     const [t] = useTranslation('common', { keyPrefix: 'contactUs' })
-
+    const onSend = () => {
+        (window as any)?.Email.send({
+            Host: "smtp.gmail.com",
+            Username: "psubhajit14@gmail.com",
+            Password: "",
+            To: 'darkspirit2212@gmail.com',
+            From: "psubhajit14@gmail.com",
+            Subject: "This is the subject",
+            Body: "And this is the body"
+        }).then(
+            (message: any) => alert(message)
+        );
+    }
     const emailRegex = new RegExp(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/)
 
     const [name, setName] = useState<string>('')
@@ -27,6 +39,7 @@ const RightSection = () => {
             name, email, subject, message
         }
         console.log('formData: ', formData);
+        onSend();
     }
 
     return (
