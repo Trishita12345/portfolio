@@ -12,26 +12,28 @@
         "skillsText": "Skills",
         "projectsText": "Projects",
         "contactText": "Contact",
-        "backtoHome": "Go Back to Home Page"
+        "backtoHome": "Go Back to Home Page",
+        "downloadCvText": "Download CV"
     },
     "about": {
         "header1": "Any Type Of Query & Discussion",
         "expText": "Years Of Experience",
+        "projectsText": "Projects in ReactJS",
         "header2": "Don't Go By My Words. ",
         "header3": "More You Can Find Here",
-        "aboutText": "Full stack web developer with 3+ years of experience in building data intensive web applications with React JS and Spring  Boot with SQL server. I have built few Flutter project. I have in depth understanding of the complete SDLC with skills in  HTML5, CSS, Javascript, React JS, Redux, Web API, Java Spring Boot, Flutter, Dart JS, SQL, Git., JIRA",
+        "aboutText": "Full stack web developer with 3+ years of experience in building data intensive web applications with React JS and .NET with SQL server. I have in depth understanding of the complete SDLC with skills in  HTML5, CSS, Javascript, React JS, Redux, Web API, .NET, Figma, SQL, Git., JIRA",
         "downloadCvText": "Download CV"
     },
     "expertize": {
-        "header": "We Have Expertize With World's Most Powerful Tools",
-        "description": "",
+        "header": "I Have Expertize With World's Most Powerful Tools",
+        "description": "Till now I have worked on lot of frontend technologies. Technologies I have expertize and can provide supports are - ",
         "reactJsDesc": "ReactJS is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta (formerly Facebook)",
         "muiDesc": "Material UI is beautiful by design and features a suite of customization options that make it easy to implement your own custom design system.",
         "vscodeDesc": "Visual Studio Code, also commonly referred to as VS Code, is a source-code editor made by Microsoft with the Electron Framework, for Windows, Linux and macOS.",
         "reduxDesc": "Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with React or Angular for building user interfaces.",
-        "springDesc": "Spring Boot Extension is Spring's convention-over-configuration solution for creating production-grade Spring applications with minimal amounts of configuration",
-        "nodeDesc": "Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime env",
-        "firebaseDesc": "Firebase, Inc. is a set of backend cloud computing services and application development platforms provided by Google. It hosts databases, services, authentication",
+        "typescriptDesc": "TypeScript is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript. It is designed for the development of large applications and transpiles to JavaScript.",
+        "figmaDesc": "Figma is a collaborative web application for interface design, with additional offline features enabled by desktop applications for macOS and Windows. The feature set of Figma focuses on user interface and user experience design, with an emphasis on real-time collaboration",
+        "gitDesc": "Git is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers who are collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows",
         "databaseDesc": "MySQL is an open-source relational database management system (RDBMS). SQL is a language that programmers use to create, modify and extract data from the relational db, as well as control user access to the db."
     },
     "skills": {
@@ -43,7 +45,7 @@
         "devops": "DevOps"
     },
     "follow": {
-        "title": "Follow Us"
+        "title": "Follow Me"
     },
     "feedback": {
         "title": "Our Happy Client"
@@ -82,6 +84,8 @@
         "clientName": "Client Name",
         "githubLink": "GitHub Link",
         "websiteUrl": "Website Link",
-        "finishDate": "Finish Date"
+        "finishDate": "Finish Date",
+        "collaboration": "Collaboration",
+        "GRPAC_Desc": "It is a application that is being used in Social service for getting digital signature from common people. It supports 2 language Bengali & English for more customer reach.It has features like Google Sign in, Autenticated Screens for Admin. Firebase setup, Hosting, Image upload, Payment Gateway integration etc."
     }
 }

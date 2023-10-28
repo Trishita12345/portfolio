@@ -73,10 +73,10 @@ const Feedback = () => {
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 autoPlay={true}
-                autoPlaySpeed={2000}
+                autoPlaySpeed={1800}
                 keyBoardControl={false}
                 customTransition="all .5"
-                transitionDuration={700}
+                transitionDuration={600}
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile", "desktop", "desktop2"]}
                 // deviceType={this.props.deviceType}

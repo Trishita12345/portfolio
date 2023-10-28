@@ -24,25 +24,18 @@ const Skills: React.FC<any> = () => {
         backgroundColor: "#fef2dd"
     }, {
         title: t('backend'),
-        subtitle: "Node Js, Spring Boot, Payment API Integration",
+        subtitle: "ASP .NET",
         time: "2020-Present",
         Icon: "backend",
         color: "#e22b55",
         backgroundColor: "#faeef6"
     }, {
         title: t('database'),
-        subtitle: "MySQL, PostgreSQL, Oracle DB",
+        subtitle: "MySQL",
         time: "2020-Present",
         Icon: "database",
         color: "#4ac4e3",
         backgroundColor: "#e5f8fd"
-    }, {
-        title: 'Cloud',
-        subtitle: "Firebase Cloudstore, Authentication, Authorization",
-        time: "2020-Present",
-        Icon: "cloud",
-        color: "#8bc240",
-        backgroundColor: "#e0fcdb"
     }, {
         title: 'DevOps',
         subtitle: "GitHub, Vercel",
@@ -64,14 +57,10 @@ const Skills: React.FC<any> = () => {
     },
     {
         title: "Backend Development",
-        value: 85,
+        value: 60,
         color: "#8bc240",
     }, {
-        title: "Cloud",
-        value: 80,
-        color: "#4ac4e3",
-    }, {
-        title: "Mobile",
+        title: "Mobile Responsive",
         value: 85,
         color: "#e22b55",
     }

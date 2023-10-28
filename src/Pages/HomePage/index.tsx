@@ -1,4 +1,5 @@
 import React, { Suspense, useEffect } from 'react';
+import './styling.css'
 
 const Home = React.lazy(() => import('./Home'));
 const About = React.lazy(() => import('./About'));
@@ -30,9 +31,9 @@ const HomePage = () => {
             <Suspense fallback={<div>...Loading</div>}>
                 <TopProjects />
             </Suspense>
-            <Suspense fallback={<div>...Loading</div>}>
+            {/* <Suspense fallback={<div>...Loading</div>}>
                 <Feedback />
-            </Suspense>
+            </Suspense> */}
             <Suspense fallback={<div>...Loading</div>}>
                 <Follow />
             </Suspense>

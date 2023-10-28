@@ -1,10 +1,6 @@
 import { Box, Grid, IconButton, Typography, useMediaQuery, useTheme } from "@mui/material"
 import { useTranslation } from "react-i18next";
-import { theme } from "../../../theme";
-import { MdDrafts } from "react-icons/md";
-import { FaBuilding } from "react-icons/fa"
 import LeftSection from "./LeftSection";
-import RightSection from "./RightSection";
 import { images } from "../../../Assets/images";
 import { useEffect } from "react";
 
@@ -22,8 +18,8 @@ const ContactUs = () => {
             <Grid item xs={12} lg={6} color={theme.palette.primary.dark}>
                 <LeftSection />
             </Grid>
-            <Grid item xs={12} lg={6} bgcolor={"white"}>
-                <RightSection />
+            <Grid item xs={12} lg={6} >
+                {/* <RightSection /> */}
             </Grid>
         </Grid >
     )

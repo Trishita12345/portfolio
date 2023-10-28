@@ -1,7 +1,7 @@
 import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material"
 
 import { MdSchool } from 'react-icons/md'
-import { FaDatabase, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { FaDatabase, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 import { BsCloudsFill } from 'react-icons/bs'
 import { GrDeploy } from 'react-icons/gr'
 import { PiProjectorScreenChartLight } from 'react-icons/pi'
@@ -30,6 +30,10 @@ const getIcon = (Icon: string, color: string): React.ReactNode => {
             return <FaInstagram style={{ color: color, fontSize: "30px" }} />
         case "linkedin":
             return <FaLinkedinIn style={{ color: color, fontSize: "30px" }} />
+        case "whatsapp":
+            return <FaWhatsapp style={{ color: color, fontSize: "30px" }} />
+        case "youtube":
+            return <FaYoutube style={{ color: color, fontSize: "30px" }} />
     }
     return null;
 }
@@ -40,7 +44,7 @@ export const ListItem = ({ item, index, lg = 3 }: { item: any, index: number, lg
     const theme = useTheme();
     const screenSizeDownMd = useMediaQuery(theme.breakpoints.down('md'))
     return (
-        <FadeInGrid item xs={12} sm={5} lg={lg} borderRadius={2} paddingLeft={4} margin={2} onClick={() => item.link && window.location.assign(item.link)}
+        <FadeInGrid item xs={12} sm={5} lg={lg} borderRadius={2} paddingLeft={4} margin={2} onClick={() => item.link && window.open(item.link)}
             boxShadow={'0 20px 50px rgba(0, 0, 0, 0.07)'} position={"relative"} overflow={"hidden"} sx={{
                 ":hover": {
                     bgcolor: item.backgroundColor,

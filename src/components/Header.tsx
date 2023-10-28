@@ -1,4 +1,4 @@
-import { Box, Button, Fab, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, Fab, Link, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { images } from '../Assets/images';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom'
@@ -79,15 +79,21 @@ const Header = () => {
                 backgroundImage: `url(${images.BackgroundImage})`
             }}>
             <Box bgcolor={theme.palette.primary.main}>
-                {!screenSizeDownMd ? <LogoComponent /> : <img src={images.LogoText} />}
+                {/* {!screenSizeDownMd ? <LogoComponent /> : <img src={images.LogoText} />} */}
             </Box>
             {!screenSizeDownMd && <NavigationComponent />}
             <Box display={'flex'} alignItems={'center'} gap={2}>
                 <LanguageComponent />
                 {!screenSizeDownSm
-                    ? <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize' }}>{t('hireMeText')}</Button>
+                    ? <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize' }}>
+                        <Link color={"#ffffff"} sx={{ textDecoration: "none" }} href={images.BackgroundImage} download={"BackgroundImage.svg"}>
+                            {t('downloadCvText')}
+                        </Link>
+                    </Button>
                     : <Fab sx={{ position: "fixed", bottom: 70, right: 30, backgroundColor: theme.palette.secondary.main, color: "white" }}>
-                        <PiSuitcaseSimpleLight size={"20px"} />
+                        <Link color={"#ffffff"} sx={{ textDecoration: "none" }} href={images.BackgroundImage} download={"BackgroundImage.svg"}>
+                            <PiSuitcaseSimpleLight size={"20px"} />
+                        </Link>
                     </Fab>
                 }
                 {screenSizeDownMd && <FixedBottomNavigation />}

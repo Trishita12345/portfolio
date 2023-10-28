@@ -3,8 +3,6 @@ import { images } from '../../Assets/images';
 import Header from '../../components/Header';
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineInstagram } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
-import './styling.css';
-import { BsWhatsapp } from 'react-icons/bs';
 import { BiLogoWhatsapp } from 'react-icons/bi';
 import { motion } from "framer-motion";
 
@@ -44,27 +42,27 @@ const Home = () => {
                     left: screenSizeDownSm ? 20 : 50,
                 }} display={'flex'} flexDirection={'column'} gap={2}>
                     <motion.div whileHover={{ scale: 1.6 }}>
-                        <a href='https://www.facebook.com/subhajit.paul.1840?mibextid=ZbWKwL' target={'_blank'}>
+                        <a href='https://www.facebook.com/trishita.majumder.562?mibextid=ZbWKwL' target={'_blank'}>
                             <AiFillFacebook style={{ ...socialIconStyle }} />
                         </a>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.6 }}>
-                        <a href='https://github.com/psubhajit14' target={'_blank'}>
+                        <a href='https://github.com/Trishita12345' target={'_blank'}>
                             <AiFillGithub style={socialIconStyle} />
                         </a>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.6 }}>
-                        <a href='https://www.linkedin.com/in/subhajit-paul-178a06219' target={'_blank'}>
+                        <a href='https://www.linkedin.com/in/trishita-majumder-642b6a18b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' target={'_blank'}>
                             <AiFillLinkedin style={socialIconStyle} />
                         </a>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.6 }}>
-                        <a href={'https://instagram.com/subhajitpaul744?igshid=MzMyNGUyNmU2YQ=='} target={'_blank'}>
+                        <a href={'https://instagram.com/__myself_trishita74?igshid=OGQ5ZDc2ODk2ZA=='} target={'_blank'}>
                             <AiOutlineInstagram style={socialIconStyle} />
                         </a>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.6 }}>
-                        <a href={'https://wa.me/+918016970670'} target={'_blank'}>
+                        <a href={'https://wa.me/+917584942147'} target={'_blank'}>
                             <BiLogoWhatsapp style={socialIconStyle} />
                         </a>
                     </motion.div>
@@ -72,7 +70,7 @@ const Home = () => {
                 <Box display={'flex'} flexDirection={screenSizeDownMd ? 'column' : 'row'} justifyContent={screenSizeDownMd ? 'center' : 'space-between'}>
                     <Box display={'flex'} flexDirection={'column'} pl={8} alignItems={screenSizeDownMd ? 'center' : 'start'} flex={7} justifyContent={"center"}>
                         <Typography color={'#FFFFFF'} variant={screenSizeDownSm ? 'h4' : 'h3'} fontWeight={'bold'} whiteSpace={screenSizeDownSm ? 'normal' : 'nowrap'} textAlign={screenSizeDownMd ? 'center' : 'start'}>
-                            {t('heading1')} <br /> Subhajit Paul <br /> {t('heading2')}
+                            {t('heading1')} <br /> Trishita Majumder <br /> {t('heading2')}
                         </Typography>
                         <Box display={'flex'} gap={2} mt={screenSizeDownMd ? 2 : 6} mb={6}
                             width={"100%"}
@@ -94,11 +92,10 @@ const Home = () => {
                             </Button>
                         </Box>
                     </Box>
-                    <Box component={'img'} src={images.myImage} sx={{
+                    <Box component={'img'} src={images.trishita} sx={{
                         placeSelf: 'center',
                         zIndex: 1000, height: '700px', [theme.breakpoints.down('md')]: {
-                            width: '400px',
-                            height: '400px'
+
                         }
                     }} />
                 </Box >

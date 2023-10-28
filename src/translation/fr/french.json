@@ -12,27 +12,29 @@
         "skillsText": "Compétences",
         "projectsText": "Projets",
         "contactText": "Contact",
-        "backtoHome": "Revenir à la page d'accueil"
+        "backtoHome": "Revenir à la page d'accueil",
+        "downloadCvText": "Télécharger CV"
     },
     "about": {
         "header1": "Tout type de requête et de discussion",
         "expText": "Des années d'expérience",
+        "projectsText": "Projets en ReactJS",
         "header2": "Ne vous fiez pas à mes paroles. ",
         "header3": "Plus que vous pouvez trouver ici",
-        "aboutText": "Développeur Web full stack avec plus de 3 ans d'expérience dans la création d'applications Web gourmandes en données avec React JS et Spring Boot avec SQL Server. J'ai construit quelques projets Flutter. J'ai une compréhension approfondie du SDLC complet avec des compétences en HTML5, CSS, Javascript, React JS, Redux, Web API, Java Spring Boot, Flutter, Dart JS, SQL, Git., JIRA.",
+        "aboutText": "Développeur Web full stack avec plus de 3 ans d'expérience dans la création d'applications Web gourmandes en données avec React JS et .NET avec serveur SQL. J'ai une compréhension approfondie du SDLC complet avec des compétences en HTML5, CSS, Javascript, React JS, Redux, API Web, .NET, Figma, SQL, Git., JIRA",
         "downloadCvText": "Télécharger CV"
     },
     "expertize": {
-        "header": "Nous disposons d'une expertise avec les outils les plus puissants au monde",
-        "description": "",
-        "reactJsDesc": "ReactJS est une bibliothèque JavaScript frontale gratuite et open source permettant de créer des interfaces utilisateur basées sur des composants. Il est maintenu par Meta (anciennement Facebook)",
-        "muiDesc": "Material UI est beau de par sa conception et propose une suite d'options de personnalisation qui facilitent la mise en œuvre de votre propre système de conception personnalisé.",
-        "vscodeDesc": "Visual Studio Code, également communément appelé VS Code, est un éditeur de code source créé par Microsoft avec Electron Framework, pour Windows, Linux et macOS.",
-        "reduxDesc": "Redux est une bibliothèque JavaScript open source permettant de gérer et de centraliser l'état des applications. Il est le plus couramment utilisé avec React ou Angular pour créer des interfaces utilisateur.",
-        "springDesc": "Spring Boot Extension est la solution de convention sur configuration de Spring pour créer des applications Spring de qualité production avec un minimum de configuration.",
-        "nodeDesc": "Node.js est un environnement de serveur open source multiplateforme qui peut fonctionner sous Windows, Linux, Unix, macOS, etc. Node.js est un environnement d'exécution JavaScript back-end",
-        "firebaseDesc": "Firebase, Inc. est un ensemble de services de cloud computing back-end et de plateformes de développement d'applications fournis par Google. Il héberge des bases de données, des services, des authentifications",
-        "databaseDesc": "MySQL est un système de gestion de bases de données relationnelles (SGBDR) open source. SQL est un langage que les programmeurs utilisent pour créer, modifier et extraire des données de la base de données relationnelle, ainsi que pour contrôler l'accès des utilisateurs à la base de données."
+        "header": "J'ai une expertise avec les outils les plus puissants au monde",
+        "description": "Jusqu'à présent, j'ai travaillé sur de nombreuses technologies frontend. Les technologies que je maîtrise et que je peux fournir sont - ",
+        "reactJsDesc": "ReactJS is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta (formerly Facebook)",
+        "muiDesc": "Material UI is beautiful by design and features a suite of customization options that make it easy to implement your own custom design system.",
+        "vscodeDesc": "Visual Studio Code, also commonly referred to as VS Code, is a source-code editor made by Microsoft with the Electron Framework, for Windows, Linux and macOS.",
+        "reduxDesc": "Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with React or Angular for building user interfaces.",
+        "typescriptDesc": "TypeScript est un langage de programmation de haut niveau gratuit et open source développé par Microsoft qui ajoute du typage statique avec des annotations de type facultatives à JavaScript. Il est conçu pour le développement d'applications volumineuses et se transpile en JavaScript.",
+        "gitDesc": "Git est un système de contrôle de version distribué qui suit les modifications apportées à n'importe quel ensemble de fichiers informatiques, généralement utilisé pour coordonner le travail entre les programmeurs qui développent en collaboration le code source pendant le développement de logiciels. Ses objectifs incluent la vitesse, l'intégrité des données et la prise en charge de flux de travail distribués et non linéaires",
+        "figmaDesc": "Figma est une application Web collaborative pour la conception d'interfaces, avec des fonctionnalités hors ligne supplémentaires activées par les applications de bureau pour macOS et Windows. L'ensemble des fonctionnalités de Figma se concentre sur la conception de l'interface utilisateur et de l'expérience utilisateur, en mettant l'accent sur la collaboration en temps réel.",
+        "databaseDesc": "MySQL is an open-source relational database management system (RDBMS). SQL is a language that programmers use to create, modify and extract data from the relational db, as well as control user access to the db."
     },
     "skills": {
         "title": "Expérience et compétences",
@@ -41,7 +43,7 @@
         "database": "Gestion de base de données"
     },
     "follow": {
-        "title": "Suivez-nous"
+        "title": "Suis-moi"
     },
     "feedback": {
         "title": "Notre client heureux"
@@ -80,6 +82,8 @@
         "clientName": "Nom du client",
         "githubLink": "Lien GitHub",
         "websiteUrl": "Lien vers le site Web",
-        "finishDate": "Date de fin"
+        "finishDate": "Date de fin",
+        "collaboration": "Collaboration",
+        "GRPAC_Desc": "Il s'agit d'une application utilisée dans les services sociaux pour obtenir la signature numérique des gens ordinaires.Il prend en charge 2 langues bengali et anglais pour une plus grande portée client.Il possède des fonctionnalités telles que la connexion à Google et des écrans autentifiés pour l'administrateur. Configuration de Firebase, hébergement, téléchargement d'images, intégration de la passerelle de paiement, etc."
     }
 }

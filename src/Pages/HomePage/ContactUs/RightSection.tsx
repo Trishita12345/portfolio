@@ -1,8 +1,5 @@
 import { Box, Button, Grid, IconButton, TextField, Typography, useMediaQuery, useTheme } from "@mui/material"
 import { useTranslation } from "react-i18next";
-import { theme } from "../../../theme";
-import { MdDrafts } from "react-icons/md";
-import { FaBuilding } from "react-icons/fa"
 import { useState } from "react";
 
 const RightSection = () => {

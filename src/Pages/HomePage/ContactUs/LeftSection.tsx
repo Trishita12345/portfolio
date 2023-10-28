@@ -23,10 +23,10 @@ const LeftSection = () => {
                 <Typography fontWeight={'bold'} variant="h5">&nbsp; &nbsp;{t('contactus')}</Typography>
             </Box>
             <Typography mt={2} ml={1} fontWeight={500}>
-                {t('phone')} : +91-8016970670
+                {t('phone')} : +91-75849-42147
             </Typography>
             <Typography ml={1} fontWeight={500}>
-                {t('email')} : psubhajit14@gmail.com
+                {t('email')} : trishita.majumdmer@gmail.com
             </Typography>
             <Box display='flex' alignItems={'center'} mt={5}>
                 <IconButton sx={{ borderRadius: '50%', backgroundColor: "#fef2dd", height: '50px', width: '50px' }}>
