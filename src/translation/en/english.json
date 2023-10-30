@@ -9,9 +9,10 @@
         "hireMeText": "Hire Me",
         "homeText": "Home",
         "aboutText": "About",
-        "blogText": "Blog",
-        "pagesText": "Pages",
-        "contactText": "Contact"
+        "skillsText": "Skills",
+        "projectsText": "Projects",
+        "contactText": "Contact",
+        "backtoHome": "Go Back to Home Page"
     },
     "about": {
         "header1": "Any Type Of Query & Discussion",
@@ -22,7 +23,16 @@
         "downloadCvText": "Download CV"
     },
     "expertize": {
-        "header": "We Have Expertize With World's Most Powerful Tools"
+        "header": "We Have Expertize With World's Most Powerful Tools",
+        "description": "",
+        "reactJsDesc": "ReactJS is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta (formerly Facebook)",
+        "muiDesc": "Material UI is beautiful by design and features a suite of customization options that make it easy to implement your own custom design system.",
+        "vscodeDesc": "Visual Studio Code, also commonly referred to as VS Code, is a source-code editor made by Microsoft with the Electron Framework, for Windows, Linux and macOS.",
+        "reduxDesc": "Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with React or Angular for building user interfaces.",
+        "springDesc": "Spring Boot Extension is Spring's convention-over-configuration solution for creating production-grade Spring applications with minimal amounts of configuration",
+        "nodeDesc": "Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime env",
+        "firebaseDesc": "Firebase, Inc. is a set of backend cloud computing services and application development platforms provided by Google. It hosts databases, services, authentication",
+        "databaseDesc": "MySQL is an open-source relational database management system (RDBMS). SQL is a language that programmers use to create, modify and extract data from the relational db, as well as control user access to the db."
     },
     "skills": {
         "title": "Experience & Skills",
@@ -31,5 +41,47 @@
         "database": "Database Management",
         "cloud": "Cloud",
         "devops": "DevOps"
+    },
+    "follow": {
+        "title": "Follow Us"
+    },
+    "feedback": {
+        "title": "Our Happy Client"
+    },
+    "contactUs": {
+        "contactus": "Contact Us",
+        "header1": "Don't Hesitate To Contact Us",
+        "header2": "If You Need More Help.",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "Email",
+        "writeToUs": "Write to Us",
+        "name": "Name",
+        "subject": "Subject",
+        "yourMessage": "Your Message",
+        "submitNow": "Submit Now",
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "subjectRequired": "Subject is required",
+        "messageRequired": "Message is required",
+        "emailInvalid": "Please enter a valid email",
+        "addressValue": "Flat no: GN OAK, Hiland Woods, Street no: 626,   action area: IIC, Newtown, Kolkata - 700157"
+    },
+    "footer": {
+        "copyrightText": "All Rights Reserved.",
+        "backToTop": "Back to Top",
+        "heading": "If You Have Any Question Feel Free To Call "
+    },
+    "projects": {
+        "backHome": "Back Home",
+        "ourTopProjects": "Our Top Projects",
+        "seeAllProjects": "See All Projects",
+        "ourProjects": "Our Projects",
+        "all": "All",
+        "domain": "Category",
+        "clientName": "Client Name",
+        "githubLink": "GitHub Link",
+        "websiteUrl": "Website Link",
+        "finishDate": "Finish Date"
     }
 }

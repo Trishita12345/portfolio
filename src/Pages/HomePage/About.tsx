@@ -1,5 +1,5 @@
-import { Box, Button, Grid, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { images } from '../Assets/images';
+import { Box, Button, Grid, IconButton, Link, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { images } from '../../Assets/images';
 import { useTranslation } from 'react-i18next';
 import { MdDrafts } from 'react-icons/md'
 import { motion } from "framer-motion"
@@ -14,14 +14,14 @@ const About = () => {
     return (
         <>
 
-            <Box
+            <Box id='about'
                 sx={{
-                    // height: '400px',
+                    overflow: 'hidden',
                     backgroundImage: `url(${images.BackgroundSection2})`,
                     // backgroundColor: '#ffffea',
                     [theme.breakpoints.down(600)]: {
                         px: 2
-                    }
+                    },
                 }}
                 px={screenSizeDownMd ? 5 : 20}
                 py={8}
@@ -32,7 +32,7 @@ const About = () => {
                         <FadeIn>
                             <Box display={'flex'} flexDirection={'column'} gap={4}>
 
-                                <Typography sx={{ color: theme.palette.primary.dark }} variant='h4' fontWeight={600}>
+                                <Typography sx={{ color: theme.palette.primary.dark }} variant='h4' fontWeight={'bold'}>
                                     {t('header1')}
                                 </Typography>
 
@@ -41,21 +41,21 @@ const About = () => {
                                     <IconButton sx={{ borderRadius: '50%', backgroundColor: theme.palette.secondary.light, height: '30px', width: '30px' }}>
                                         <MdDrafts color='secondary' style={{ fontSize: '16px' }} />
                                     </IconButton>
-                                    <Typography sx={{ fontSize: '12px', fontWeight: 600 }} color="secondary"><u>psubhajit14@gmail.com</u></Typography>
+                                    <Typography sx={{ fontSize: '12px', fontWeight: 'bold' }} color="secondary"><u>psubhajit14@gmail.com</u></Typography>
 
                                 </Box>
                                 <Grid container gap={3}>
-                                    <Grid item xs={3}>
+                                    <Grid item xs={6}>
                                         <Box display={'flex'} gap={1} alignItems='center'>
-                                            <Typography variant='h3' fontWeight={600} sx={{ color: theme.palette.primary.light }}>3</Typography>
+                                            <Typography variant='h3' fontWeight={'bold'} sx={{ color: theme.palette.primary.light }}>3+</Typography>
                                             <Typography sx={{ fontSize: '12px' }}>{t('expText')} </Typography>
                                         </Box>
                                     </Grid>
                                     <Grid item xs={3}>
-                                        <Box display={'flex'} gap={1} alignItems='center'>
-                                            <Typography variant='h3' fontWeight={600} sx={{ color: '#FAA314' }}>20+</Typography>
+                                        {/* <Box display={'flex'} gap={1} alignItems='center'>
+                                            <Typography variant='h3' fontWeight={'bold'} sx={{ color: '#FAA314' }}>20+</Typography>
                                             <Typography sx={{ fontSize: '12px' }}>{t('expText')} </Typography>
-                                        </Box>
+                                        </Box> */}
                                     </Grid>
                                 </Grid>
                             </Box>
@@ -65,11 +65,11 @@ const About = () => {
                     <Grid item xs={12} md={6}>
                         <FadeIn direction='right'>
                             <Box display={'flex'} flexDirection={'column'} gap={4}>
-                                <Typography sx={{ color: theme.palette.primary.dark }} variant='h4' fontWeight={600}>
+                                <Typography sx={{ color: theme.palette.primary.dark }} variant='h4' fontWeight={'bold'}>
                                     {t('header2')}{t('header3')}
                                 </Typography>
                                 <Typography fontSize={'12px'}>{t('aboutText')}</Typography>
-                                <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize', width: 'max-content' }} >{t('downloadCvText')}</Button>
+                                <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize', width: 'max-content' }} ><Link color={"#ffffff"} sx={{ textDecoration: "none" }} href={images.BackgroundImage} download={"BackgroundImage.svg"}> {t('downloadCvText')} </Link></Button>
                             </Box>
                         </FadeIn>
                     </Grid>
