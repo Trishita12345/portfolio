@@ -11,6 +11,7 @@ import FullLogo from './images/FullLogo.svg'
 import Rectangle42 from './images/Rectangle42.svg'
 import SideImg from './images/SideImg.svg';
 import GRPAC_Thambnail from './images/GRPAC_Thambnail.svg';
+import Trishita from './images/TrishitaImage.png';
 
 export const images = {
     myImage,
@@ -25,5 +26,6 @@ export const images = {
     GRPAC_Thambnail,
     FullLogo,
     LogoImage,
-    LogoText
+    LogoText,
+    Trishita
 }

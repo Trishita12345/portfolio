@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ProjectItems } from "../../components/ProjectItems";
 import { projectData } from "../../data/projectData";
 
-const projectIndexes = [1, 2]
+const projectIndexes = [1]
 
 const TopProjects = () => {
     const navigate = useNavigate();

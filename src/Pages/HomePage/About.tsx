@@ -1,16 +1,28 @@
-import { Box, Button, Grid, IconButton, Link, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, Grid, IconButton, Link, Menu, MenuItem, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { images } from '../../Assets/images';
 import { useTranslation } from 'react-i18next';
 import { MdDrafts } from 'react-icons/md'
 import { motion } from "framer-motion"
 import './styling.css';
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
+import { BiDownload } from 'react-icons/bi';
+import Trishita_CV from '../../Assets/pdf/Trishita.pdf'
+import Subhajit_CV from '../../Assets/pdf/Subhajit.pdf'
 
 const About = () => {
     const theme = useTheme();
     const screenSizeDownMd = useMediaQuery(theme.breakpoints.down('md'))
     const screenSizeDownSm = useMediaQuery(theme.breakpoints.down('sm'))
     const [t] = useTranslation('common', { keyPrefix: 'about' })
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
     return (
         <>
 
@@ -30,7 +42,11 @@ const About = () => {
                     <Grid item xs={12} md={6}>
 
                         <FadeIn>
-                            <Box display={'flex'} flexDirection={'column'} gap={4}>
+                            <Box display={'flex'} flexDirection={'column'} gap={4} sx={{
+                                [theme.breakpoints.down('sm')]: {
+                                    alignItems: "center"
+                                }
+                            }}>
 
                                 <Typography sx={{ color: theme.palette.primary.dark }} variant='h4' fontWeight={'bold'}>
                                     {t('header1')}
@@ -44,19 +60,14 @@ const About = () => {
                                     <Typography sx={{ fontSize: '12px', fontWeight: 'bold' }} color="secondary"><u>psubhajit14@gmail.com</u></Typography>
 
                                 </Box>
-                                <Grid container gap={3}>
+                                <Grid container gap={3} sx={{ [theme.breakpoints.down('sm')]: { flexDirection: "column", justifyContent: "center", alignItems: "center" } }}>
                                     <Grid item xs={6}>
                                         <Box display={'flex'} gap={1} alignItems='center'>
                                             <Typography variant='h3' fontWeight={'bold'} sx={{ color: theme.palette.primary.light }}>3+</Typography>
                                             <Typography sx={{ fontSize: '12px' }}>{t('expText')} </Typography>
                                         </Box>
                                     </Grid>
-                                    <Grid item xs={3}>
-                                        {/* <Box display={'flex'} gap={1} alignItems='center'>
-                                            <Typography variant='h3' fontWeight={'bold'} sx={{ color: '#FAA314' }}>20+</Typography>
-                                            <Typography sx={{ fontSize: '12px' }}>{t('expText')} </Typography>
-                                        </Box> */}
-                                    </Grid>
+
                                 </Grid>
                             </Box>
                         </FadeIn>
@@ -69,10 +80,46 @@ const About = () => {
                                     {t('header2')}{t('header3')}
                                 </Typography>
                                 <Typography fontSize={'12px'}>{t('aboutText')}</Typography>
-                                <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.light, textTransform: 'capitalize', width: 'max-content' }} ><Link color={"#ffffff"} sx={{ textDecoration: "none" }} href={images.BackgroundImage} download={"BackgroundImage.svg"}> {t('downloadCvText')} </Link></Button>
+                                <Button variant="contained" sx={{
+                                    backgroundColor: theme.palette.primary.light, textTransform: 'capitalize', width: 'max-content', [theme.breakpoints.down('sm')]: {
+                                        alignSelf: "center"
+                                    }
+                                }} onClick={handleClick}>{t('downloadCvText')}</Button>
                             </Box>
                         </FadeIn>
                     </Grid>
+                    <Menu
+                        id="basic-menu"
+                        anchorEl={anchorEl}
+                        open={open}
+                        onClose={handleClose}
+                        MenuListProps={{
+                            'aria-labelledby': 'basic-button',
+                        }}
+                        sx={{
+                            'li > a': {
+                                minWidth: "200px",
+                                textDecoration: 'none',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                width: '100%',
+                                ":hover": {
+                                    color: theme.palette.secondary.main
+                                }
+                            }
+                        }}>
+                        <MenuItem onClick={handleClose}>
+                            <Link href={Subhajit_CV} download={"Subhajit_paul_theFuture.pdf"} >
+                                Subhait Paul<BiDownload />
+                            </Link>
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                            <Link href={Trishita_CV} download={"Trishita_majumder_theFuture.pdf"}>
+                                Trishita Majumder<BiDownload />
+                            </Link>
+                        </MenuItem>
+                    </Menu>
                 </Grid >
             </Box >
 

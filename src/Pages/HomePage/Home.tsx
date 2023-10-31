@@ -80,13 +80,13 @@ const Home = () => {
                     </motion.div>
                 </Box>
                 <Box display={'flex'} flexDirection={screenSizeDownMd ? 'column' : 'row'} justifyContent={screenSizeDownMd ? 'center' : 'space-between'}>
-                    <MotionBox initial={{ y: 50 }} animate={{
-                        y: -50,
+                    <MotionBox initial={{ y: screenSizeDownSm ? 0 : 100 }} animate={{
+                        y: screenSizeDownSm ? 100 : 300,
                         transition: {
                             duration: 4,
                             repeat: Infinity,
                         }
-                    }} display={'flex'} flexDirection={'column'} pl={8} alignItems={screenSizeDownMd ? 'center' : 'start'} flex={7} justifyContent={"center"}>
+                    }} display={'flex'} flexDirection={'column'} pl={8} alignItems={screenSizeDownMd ? 'center' : 'start'} flex={7} justifyContent={"center"} height={"200%"}>
                         <Typography color={'#FFFFFF'} variant={screenSizeDownSm ? 'h4' : 'h3'} fontWeight={600} whiteSpace={screenSizeDownSm ? 'normal' : 'nowrap'} textAlign={screenSizeDownMd ? 'center' : 'start'}>
                             {t('heading1')} <br /> {person} <br /> {t('heading2')}
                         </Typography>
@@ -113,14 +113,20 @@ const Home = () => {
                     <AnimatePresence >
                         {person === "Subhajit Paul" ? <Box component={'img'} src={images.myImage} sx={{
                             placeSelf: 'center',
-                            zIndex: 1000, height: '700px', [theme.breakpoints.down('md')]: {
-                                width: '400px',
-                                height: '400px'
+                            zIndex: 1000, height: '500px',
+                            [theme.breakpoints.up('md')]: {
+                                position: 'absolute',
+                                bottom: 0,
+                                left: '60vw'
+                            },
+                            [theme.breakpoints.down('md')]: {
+                                marginTop: '150px',
+                                height: '280px',
                             }
-                        }} /> : <Box component={'img'} src={images.Logo} sx={{
+                        }} /> : <Box component={'img'} src={images.Trishita} sx={{
                             placeSelf: 'center',
                             zIndex: 1000, height: '700px', [theme.breakpoints.down('md')]: {
-                                width: '400px',
+                                // width: '400px',
                                 height: '400px'
                             }
                         }} />}

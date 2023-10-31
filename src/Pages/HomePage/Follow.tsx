@@ -42,7 +42,7 @@ const Follow = () => {
         Icon: "whatsapp",
         color: "#25d366",
         backgroundColor: "#25d36630",
-        link: "https://www.linkedin.com"
+        link: "https://wa.me/+918016970670"
     }]
     return (
         <Box marginY={5} display={"flex"} flexDirection={"column"} alignItems={"center"} overflow={"hidden"} position={"relative"} id={'followUs'}>
